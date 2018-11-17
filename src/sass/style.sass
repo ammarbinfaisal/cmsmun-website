@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Crete+Round|Inconsolata:500|Lato)
+@import "mixins.sass"
+
+#landing-pg
+  #intro, #sc-gen-msg
+    min-height: 100vh
+  #intro
+    background-color: $realbeige
+    
+p#credit
+  position: fixed
+  bottom: 0
+  width: 100%
+  margin: 0
+  padding: calc(4px + .4vh) 5%
+  text-align: center
+  font-family: Inconsolata, monospace
+  color: $thegrey
+  background-color: $darkblue
+  +resp-font(.8em)
+
+  a
+    color: $cuteorange
+
+@import "./intro.sass"
+@import "./sc-gen-msg.sass"
+@import "./navbar.sass"

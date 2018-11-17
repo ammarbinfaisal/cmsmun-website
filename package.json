@@ -1,0 +1,39 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.0.19",
+    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sass": "^2.0.2",
+    "gatsby-plugin-sitemap": "^2.0.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "react-visibility-sensor": "^5.0.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "prettier": "prettier --write 'src/*/*.js'",
+    "sass": "sass --watch style.sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.4",
+    "prettier": "^1.14.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  },
+  "repository": {
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  }
+}
