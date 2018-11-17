@@ -1,0 +1,34 @@
+#sc-gen-msg
+  background:
+    image: url("../images/services-bg.webp")
+    size: cover
+    position: center
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  
+  h3
+    margin-bottom: 10vh
+    color: #eee
+    font-family: Lato, sans-serif
+    text-align: center
+    @media (min-width: 800px)
+      +resp-font(2em)
+    @media (max-width: 800px)
+      +resp-font(1.3em)
+
+  > .overlay
+    opacity: 0
+    transition-duration: 1s
+    width: 80%
+    height: 100%
+    font-family: Inconsolata, monospace
+    +resp-font(1em)
+    color: #eee
+    background-color: rgba(0, 0, 0, 0.4)
+    padding: 20px
+    border-radius: 6px
+
+    &.show
+      opacity: 1

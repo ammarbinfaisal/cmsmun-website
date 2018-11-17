@@ -1,0 +1,97 @@
+#navigation
+    position: fixed
+    top: 0
+    right: 0
+    background-color: $darkblue
+    width: 0
+    height: 0
+    animation:
+        name: grow
+        duration: .6s
+        fill-mode: forwards
+    padding: 0 6px
+    justify-content: flex-start
+    flex-direction: column
+    align-items: center
+    z-index: 10
+
+    a
+        font-family: "Open sans", Ubuntu, Roboto, Oxygen ,sans-serif
+        text-decoration: none
+        font-weight: 700
+        transform: translateY(75%)
+        margin: 0 1vw
+        transition: .4s
+        color: $realbeige
+        +resp-font(.9em)
+        padding:  8px
+        border-radius: 5px
+
+        &:hover
+            color: burlywood
+
+#nav-toggle
+    top: 0
+    right: 0
+    padding: 12px
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 10000
+    position: fixed
+    transition: .2s
+    .fa-bars
+        color: $realbeige
+        background-color: $darkblue
+        padding: 6px
+        border-radius: 4px
+        z-index: 10
+        cursor: pointer
+        @media (max-width: 600px)
+            font-size: 1em
+        @media (min-width: 600px)
+            font-size: 1.4em
+
+@keyframes grow
+    0%
+        border-bottom-left-radius:  400%
+        width: 0
+        height: 0
+    100%
+        border-bottom-left-radius: 300%
+        width: 24vh
+        height: 22vh
+
+@keyframes shrink
+    0%
+        border-bottom-left-radius:  400%
+        width: 24vh
+        height: 22vh
+    100%
+        border-bottom-left-radius: 300%
+        width: 0
+        height: 0
+
+@keyframes grow-sm
+    0%
+        border-bottom-left-radius:  400%
+        width: 0
+        height: 0
+        opacity: 0
+    100%
+        border-bottom-left-radius: 300%
+        width: 28vh
+        height: 26vh
+        opacity: 1
+
+@keyframes shrink-sm
+    0%
+        border-bottom-left-radius: 300%
+        width: 28vh
+        height: 26vh
+        opacity: 1
+    100%
+        border-bottom-left-radius:  400%
+        width: 0
+        height: 0
+        opacity: 0
