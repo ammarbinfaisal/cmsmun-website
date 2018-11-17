@@ -6,5 +6,6 @@ const columnify = {
 	alignItems: "center",
 	height: "100vh",
 	transform: "translateY(-20%)",
+	padding: "8vh 5vw"
 };
 export default columnify;
