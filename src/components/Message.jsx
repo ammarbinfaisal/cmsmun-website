@@ -14,9 +14,9 @@ class Message extends Component {
 					<VisibilitySensor
 						intervalCheck={false}
 						scrollCheck={true}
-						scrollDelay={0}
+						scrollDelay={50}
 						resizeCheck={true}
-						resizeDelay={0}
+						resizeDelay={50}
 						partialVisibility={true}
 						offset={{ top: typeof window !== "undefined" ? window.innerHeight / 2 : 50 }}
 						onChange={isVisible =>

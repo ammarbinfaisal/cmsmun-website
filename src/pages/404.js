@@ -1,17 +1,16 @@
 import React from "react";
-import Layout from "../components/Layout";
 import Helmet from "react-helmet";
 
-import columnify from "../styles/style";
+import styles from "../components/style";
 
 const NotFoundPage = () => (
-	<Layout id="404" style={columnify}>
+	<div id="404" style={styles.columnify}>
 		<Helmet>
 			<title>Page not found</title>
 		</Helmet>
-		<h1 style={{ fontSize: "2.4em", margin: "3vh 0" }}>NOT FOUND</h1>
-		<p style={{ fontSize: "1.4em" }}>You just hit a route that doesn&#39;t exist... the sadness.</p>
-	</Layout>
+		<h1 style={styles.heading}>NOT FOUND</h1>
+		<p style={styles.para}>You just hit a route that doesn&#39;t exist...<br /> & the sadness.</p>
+	</div>
 );
 
 export default NotFoundPage;

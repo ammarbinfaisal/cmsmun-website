@@ -9,11 +9,13 @@
         name: grow
         duration: .6s
         fill-mode: forwards
+    transition: .3s
     padding: 0 6px
     justify-content: flex-start
     flex-direction: column
     align-items: center
     z-index: 10
+    border-bottom: 3px #0d0d0d solid
 
     a
         font-family: "Open sans", Ubuntu, Roboto, Oxygen ,sans-serif
@@ -39,10 +41,11 @@
     align-items: center
     z-index: 10000
     position: fixed
-    transition: .2s
+    transition: .6s
     .fa-bars
         color: $realbeige
         background-color: $darkblue
+        border-left
         padding: 6px
         border-radius: 4px
         z-index: 10
@@ -59,39 +62,16 @@
         height: 0
     100%
         border-bottom-left-radius: 300%
-        width: 24vh
-        height: 22vh
+        width: 34vh
+        height: 32vh
 
 @keyframes shrink
     0%
         border-bottom-left-radius:  400%
-        width: 24vh
-        height: 22vh
+        width: 34vh
+        height: 32vh
     100%
         border-bottom-left-radius: 300%
         width: 0
         height: 0
 
-@keyframes grow-sm
-    0%
-        border-bottom-left-radius:  400%
-        width: 0
-        height: 0
-        opacity: 0
-    100%
-        border-bottom-left-radius: 300%
-        width: 28vh
-        height: 26vh
-        opacity: 1
-
-@keyframes shrink-sm
-    0%
-        border-bottom-left-radius: 300%
-        width: 28vh
-        height: 26vh
-        opacity: 1
-    100%
-        border-bottom-left-radius:  400%
-        width: 0
-        height: 0
-        opacity: 0
