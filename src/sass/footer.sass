@@ -1,0 +1,31 @@
+@import "./mixins.sass"
+    
+#footer
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: Lato
+    background-color: darken($darkblue, 5%)
+    color: $realbeige
+
+    > *
+        margin: 6vh 5vw
+        +columnify
+        h4
+            +resp-font(1.4em)
+            margin: 15px
+
+    > #info > p
+        +resp-font(.8em)
+
+    > #social
+        .fab
+            margin: 0 10px
+            +resp-font(1.4em)
+
+        .fab
+            transition: .2s
+            cursor: pointer
+
+        .fab:hover
+            color: blanchedalmond
