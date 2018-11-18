@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import Message from "../components/Message";
 import Navigation from "../components/Navigation";
 import Layout from "../components/Layout";
+import Footer from "../components/Footer";
 
 import "../sass/style.sass";
 
@@ -13,8 +14,8 @@ const Intro = () => (
 		<i
 			className="fas fa-sort-down"
 			onClick={e =>
-				window.scrollBy({
-					top: getComputedStyle(document.querySelector("#landing-pg")).height.split("px")[0],
+				window.scrollTo({
+					top: getComputedStyle(document.querySelector("#intro")).height.split("px")[0],
 					behavior: "smooth",
 				})
 			}
@@ -32,6 +33,7 @@ class IndexPage extends PureComponent {
 				<p id="credit">
 					This website is currently under development by <a href="https://ammar.netlify.com">Ammar</a>
 				</p>
+				<Footer />
 			</Layout>
 		);
 	}

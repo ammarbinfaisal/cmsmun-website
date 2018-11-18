@@ -1,0 +1,16 @@
+@import "./mixins.sass"
+
+#404, 
+#about-us, 
+#agendas
+    +columnify
+    font-family: Lato, Helvetica, sans-serif
+    height: 100vh
+    padding: 8vh 5vw
+    margin-top: -20vh
+
+    h1
+        +resp-font(1.6em)
+        margin-bottom: 4vh
+    p
+        +resp-font(1em)

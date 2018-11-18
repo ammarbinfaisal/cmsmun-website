@@ -9,7 +9,7 @@ class Message extends Component {
 	render() {
 		return (
 			<div id="sc-gen-msg">
-			<h3>Secretary General's Message</h3>
+				<h3>Secretary General's Message</h3>
 				{typeof window !== "undefined" && <VisibilitySensor /> ? (
 					<VisibilitySensor
 						intervalCheck={false}
@@ -18,7 +18,7 @@ class Message extends Component {
 						resizeCheck={true}
 						resizeDelay={50}
 						partialVisibility={true}
-						offset={{ top: typeof window !== "undefined" ? window.innerHeight / 2 : 50 }}
+						offset={{ top: typeof window !== "undefined" ? window.innerHeight / 3 : 50 }}
 						onChange={isVisible =>
 							isVisible ? this.setState({ show: true }) : this.setState({ show: false })
 						}
