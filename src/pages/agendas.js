@@ -34,7 +34,7 @@ class Agendas extends PureComponent {
 				</Helmet>
 				<Navigation />
 				<h1>Agendas</h1>
-				<Agenda img={shochumImg} alt="shochum.jpg" agTitle="SHOCHUM">
+				<Agenda img={shochumImg} alt="shochum.jpg" agTitle="SOCHUM">
 					Protecting the cultural identities with regard to the alarming increase of Islamophobia.
 				</Agenda>
 				<Agenda img={unhrcImg} alt="unhrc.jpg" agTitle="United Nations Human Rights Council">
