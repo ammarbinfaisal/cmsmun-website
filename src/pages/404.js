@@ -4,7 +4,7 @@ import Helmet from "react-helmet";
 import "../sass/page.sass";
 
 const NotFoundPage = () => (
-	<div id="404">
+	<div id="404" className="plain-page">
 		<Helmet>
 			<title>Page not found</title>
 		</Helmet>

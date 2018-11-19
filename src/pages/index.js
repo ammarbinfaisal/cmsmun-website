@@ -30,9 +30,6 @@ class IndexPage extends PureComponent {
 				<Navigation />
 				<Intro />
 				<Message />
-				<p id="credit">
-					This website is currently under development by <a href="https://ammar.netlify.com">Ammar</a>
-				</p>
 				<Footer />
 			</Layout>
 		);

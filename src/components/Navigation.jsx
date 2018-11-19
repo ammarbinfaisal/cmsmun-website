@@ -16,7 +16,7 @@ class Navigation extends PureComponent {
 						if (this.state.display === "flex") {
 							this.setState({
 								animationName: "shrink",
-								navitems: { animationName: "fadeOut" },
+								navitems: { transform: "scale(0) translateY(75%)", opacity: 0 },
 								navMinHeight: 0,
 								navMinWidth: 0,
 							});
@@ -27,7 +27,11 @@ class Navigation extends PureComponent {
 						}
 						// growqing if shrunk
 						else if (this.state.display === "none") {
-							this.setState({ animationName: "grow", display: "flex", navitems: { animationName: "fadeIn" } });
+							this.setState({
+								animationName: "grow",
+								display: "flex",
+								navitems: { transform: "scale(1) translateY(75%)", opacity: 1 },
+							});
 							setTimeout(() => {
 								this.setState({ navMinHeight: "225px", navMinWidth: "225px" });
 							}, 600);
