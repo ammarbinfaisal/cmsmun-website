@@ -20,9 +20,17 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sass`,
             options: {
-                includePaths: ["sass/"],
+                includePaths: ["src/sass/"],
             },
         },
+        // {
+        //     resolve: 'gatsby-plugin-react-svg',
+        //     options: {
+        //         rule: {
+        //             include: /assets/
+        //         }
+        //     }
+        // },
         // "gatsby-plugin-sitemap",
         // "gatsby-plugin-offline",
     ],

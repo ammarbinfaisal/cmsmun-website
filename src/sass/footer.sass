@@ -12,8 +12,12 @@
         margin: 6vh 5vw
         +columnify
         h4
-            +resp-font(1.4em)
             margin: 15px
+        
+        h4, .fab
+            +resp-font(1.4em)
+            @media (max-width: 600px)
+                +resp-font(.9em)
 
     > #info > p
         +resp-font(.8em)
@@ -21,8 +25,7 @@
     > #social
         .fab
             margin: 0 10px
-            +resp-font(1.4em)
-
+                
         .fab
             transition: .2s
             cursor: pointer
