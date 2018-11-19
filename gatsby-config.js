@@ -23,7 +23,7 @@ module.exports = {
                 includePaths: ["sass/"],
             },
         },
-        "gatsby-plugin-sitemap",
-        "gatsby-plugin-offline",
+        // "gatsby-plugin-sitemap",
+        // "gatsby-plugin-offline",
     ],
 };
