@@ -1,7 +1,6 @@
 import React, { PureComponent } from "react";
 import Helmet from "react-helmet";
 import Layout from "../components/Layout";
-import Navigation from "../components/Navigation";
 
 import "../sass/agendas.sass";
 
@@ -32,7 +31,6 @@ class Agendas extends PureComponent {
 				<Helmet>
 					<title>Agendas | CMS MUN</title>
 				</Helmet>
-				<Navigation />
 				<h1>Agendas</h1>
 				<Agenda img={shochumImg} alt="shochum.jpg" agTitle="SOCHUM">
 					Protecting the cultural identities with regard to the alarming increase of Islamophobia.
