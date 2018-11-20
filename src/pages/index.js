@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
 import Message from "../components/Message";
-import Navigation from "../components/Navigation";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 
@@ -27,7 +26,6 @@ class IndexPage extends PureComponent {
 	render() {
 		return (
 			<Layout id="landing-pg">
-				<Navigation />
 				<Intro />
 				<Message />
 				<Footer />

@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import Navigation from "./Navigation";
 
 import "./reset.css";
 
@@ -22,6 +23,7 @@ class Layout extends PureComponent {
 						content="City Montessori School Aliganj's Model United NAtions (CMS Mun)"
 					/>
 				</Helmet>
+				<Navigation />
 				<div id={this.props.id} style={this.props.style}>
 					{this.props.children}
 				</div>
