@@ -1,11 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=Crete+Round|Inconsolata:500|Lato)
+@import url(https://fonts.googleapis.com/css?family=Crete+Round|Bree+Serif|Inconsolata:500|Lato)
 @import "mixins.sass"
 
 #landing-pg
   #intro, #sc-gen-msg
     min-height: 100vh
-  #intro
-    background-color: $realbeige
+
+.realgold
+  color: #aa8800
+.lightgold
+  color: #e9e0bd
+.black
+  color: #241f1c
+.bg-black
+  background-color: #241f1c
+.bg-fixed
+  background-attachment: fixed
+.monospace
+  font-family: Inconsolata, monospace
+.bree-serif
+  font-family: "Bree serif", sans-serif
+.lato
+  font-family: Lato, sans
+.centerize
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-direction: column
 
 @import "./intro.sass"
 @import "./sc-gen-msg.sass"
