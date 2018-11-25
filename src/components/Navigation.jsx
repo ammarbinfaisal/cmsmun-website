@@ -8,7 +8,8 @@ class Navigation extends PureComponent {
 	}
 	render() {
 		return (
-			<div>
+			<div
+				className="realgold">
 				<div
 					id="nav-toggle"
 					onClick={() => {
@@ -42,6 +43,7 @@ class Navigation extends PureComponent {
 				</div>
 				<div
 					id="navigation"
+					className="bg-black centerize"
 					style={{
 						display: this.state.display,
 						animationName: this.state.animationName,
