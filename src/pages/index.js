@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 import VisibilitySensor from "react-visibility-sensor";
 
-import logo from "../images/logo1.svg"
+import logo from "../images/logo3.svg"
 
 import "../sass/style.sass";
 
@@ -11,8 +11,8 @@ const Intro = () => (
 	<div id="intro" className="realgold bg-fixed bree-serif">
 		<div>
 			<img src={logo} className="logo"></img>
-			<h2 className="bg-black monospace">City Montessori School, Aliganj's Model United Nation</h2>
-			<h3>2018</h3>
+			<h2 className="monospace">City&nbsp;Montessori&nbsp;School, Aliganj's Model&nbsp;United&nbsp;Nation</h2>
+			<h3>2019</h3>
 			<i
 				className="fas fa-sort-down lightgold"
 				onClick={e =>
