@@ -1,26 +1,26 @@
-@import url(https://fonts.googleapis.com/css?family=Crete+Round|Bree+Serif|Inconsolata:500|Lato)
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif|Questrial|Aleo)
 @import "mixins.sass"
 
 #landing-pg
-  #intro, #sc-gen-msg
+  #intro, #invitation
     min-height: 100vh
 
-.realgold
+.white
   color: #eee
-.lightgold
+.white
   color: #eee
 .black
   color: #241f1c
+.blue
+  color: #172940
 .bg-black
-  background-color: #0e0e0e
-.bg-fixed
-  background-attachment: fixed
-.monospace
-  font-family: Inconsolata, monospace
-.bree-serif
-  font-family: "Bree serif", sans-serif
-.lato
-  font-family: Lato, sans
+  background-color: #1e1e1e
+.aleo
+  font-family: aleo, sans-serif
+.questrial
+  font-family: Questrial, sans
+.s9em
+  +resp-font(.9em)
 .centerize
   display: flex
   justify-content: flex-start
@@ -28,5 +28,5 @@
   flex-direction: column
 
 @import "./intro.sass"
-@import "./sc-gen-msg.sass"
+@import "./invitation.sass"
 @import "./navbar.sass"
