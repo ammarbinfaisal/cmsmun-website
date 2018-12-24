@@ -85,7 +85,7 @@ class Agendas extends PureComponent {
 					<title>Agendas | CMS MUN</title>
 				</Helmet>
 				<h1>Agendas</h1>
-				<Agenda />
+				
 				{/* <Agenda img={aippmImg} alt="aippmg.jpg" agTitle="All India Political Parties Meet">
 					IC 814 Plane Hijack.
 				</Agenda>
