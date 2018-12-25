@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import Navigation from "./Navigation";
 
 import "./reset.css";
+import Footer from "./Footer";
 
 class Layout extends PureComponent {
 	render() {
@@ -17,7 +18,6 @@ class Layout extends PureComponent {
 						integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
 						crossorigin="anonymous"
 					/>
-					<meta name="google-site-verification" content="3PgQy65GcHwMk_lG9WKryxZqRGZnguIfhAApLk8u7XE" />
 					<meta
 						name="description"
 						content="City Montessori School Aliganj's Model United NAtions (CMS Mun)"
@@ -27,6 +27,7 @@ class Layout extends PureComponent {
 				<div id={this.props.id} style={this.props.style}>
 					{this.props.children}
 				</div>
+				<Footer/>
 			</div>
 		);
 	}
