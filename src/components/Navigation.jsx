@@ -8,8 +8,7 @@ class Navigation extends PureComponent {
 	}
 	render() {
 		return (
-			<div
-				className="white">
+			<div className="white">
 				<div
 					id="nav-toggle"
 					onClick={() => {
@@ -17,7 +16,7 @@ class Navigation extends PureComponent {
 						if (this.state.display === "flex") {
 							this.setState({
 								animationName: "shrink",
-								navitems: { transform: "scale(0) translateY(75%)", opacity: 0 },
+								navitems: { transform: "scale(0)", opacity: 0 },
 								// navMinHeight: 0,
 								// navMinWidth: 0,
 							});
@@ -31,7 +30,7 @@ class Navigation extends PureComponent {
 							this.setState({
 								animationName: "grow",
 								display: "flex",
-								navitems: { transform: "scale(1) translateY(75%)", opacity: 1 },
+								navitems: { transform: "scale(1)", opacity: 1 },
 							});
 							// setTimeout(() => {
 							// 	this.setState({ navMinHeight: "225px", navMinWidth: "225px" });
