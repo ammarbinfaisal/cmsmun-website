@@ -1,5 +1,5 @@
 =resp-font($font)
-  font-size: #{$font * 4/3}
+  font-size: #{$font * 6/5}
   font-size: calc(.3vh + .2vw + #{$font})
 
 =columnify
@@ -7,28 +7,3 @@
   flex-direction: column
   justify-content: center
   align-items: center
-
-body
-  &:before
-    content: ""
-    display: block
-    position: fixed
-    left: 0
-    bottom: 0
-    width: 100%
-    height: 100%
-    z-index: -100
-    transition: .4s
-    background:
-      repeat: no-repeat
-      position: 50% 50%
-      attachment: fixed
-      size: cover
-    @media (max-width: 600px)
-      background-image: url("../images/school.jpeg")
-    @media (min-width: 600px)
-      background-image: url("../images/school-lg.jpeg")
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
