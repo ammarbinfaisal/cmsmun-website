@@ -5,6 +5,9 @@
     justify-content: center
     align-items: center
     position: relative
+    @media (max-width: 400px)
+        flex-direction: column
+        
     &:before
         content: ''
         position: absolute
@@ -16,19 +19,19 @@
 
     > *
         margin: 6vh 3vw
+        @media (max-width: 400px)
+            margin: 2vh
         +columnify
         h4
             margin: 15px
             +resp-font(1.4em)
             @media (max-width: 600px)
-                +resp-font(.9em)
-        .fab
-            +resp-font(1.2em)
-            @media (max-width: 600px)
                 +resp-font(1em)
+        .fab
+            +resp-font(1.4em)
 
     > #info > p
-        +resp-font(.7em)
+        +resp-font(1em)
 
     > #social
         .fab
