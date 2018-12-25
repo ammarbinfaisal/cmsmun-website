@@ -7,10 +7,11 @@ import logo from "../images/logo3.svg"
 import "../sass/style.sass";
 
 const Intro = () => (
-	<div id="intro" className="white bg-fixed aleo">
+	<div id="intro" className="white bg-fixed lato">
 		<div>
 			<img src={logo} className="logo" alt="logo"></img>
 			<h2>City&nbsp;Montessori&nbsp;School, Aliganj's Model&nbsp;United&nbsp;Nation</h2>
+			<h1>CMSMUN ALIGANJ</h1>
 			<h3>2019</h3>
 			<i
 				className="fas fa-sort-down white"
