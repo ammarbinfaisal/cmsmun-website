@@ -10,9 +10,7 @@
 .white
   color: #eee
 .black
-  color: #241f1c
-.blue
-  color: #172940
+  color: #1e1e1e
 .bg-black
   background-color: #1e1e1e
 .lato
@@ -24,6 +22,8 @@
   +resp-font(.9em)
 .s7em
   +resp-font(.7em)
+.fw700
+  font-weight: 700
 .centerize
   display: flex
   justify-content: flex-start
@@ -31,7 +31,12 @@
   flex-direction: column
 
 
-body
+.white-overlay
+  +columnify
+  width: 100%
+  background: rgba(255, 255, 255, 0.8)
+
+#landing-pg, #about-us
   &:before
     content: ""
     display: block

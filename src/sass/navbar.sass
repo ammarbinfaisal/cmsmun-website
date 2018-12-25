@@ -9,7 +9,6 @@
         duration: .6s
         fill-mode: forwards
     transition: .3s
-    padding: 0 6px
     z-index: 10
     border-bottom: 3px #0d0d0d solid
 
@@ -21,7 +20,6 @@
         +resp-font(.9em)
         padding:  8px
         border-radius: 5px
-        transform: scale(0) translateY(75%)
         opacity: 0
         transition: .4s
 
@@ -56,17 +54,21 @@
         border-bottom-left-radius:  400%
         width: 0
         height: 0
+        padding: 0
     100%
         border-bottom-left-radius: 300%
-        width: 24vh
-        height: 24vh
+        width: 25vh
+        height: 25vh
+        padding: 5vh 5vw
 
 @keyframes shrink
     0%
         border-bottom-left-radius:  400%
-        width: 24vh
-        height: 24vh
+        width: 25vh
+        height: 25vh
+        padding: 5vh 5vw
     100%
         border-bottom-left-radius: 300%
         width: 0
         height: 0
+        padding: 0

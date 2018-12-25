@@ -6,8 +6,8 @@ import "../sass/agendas.sass";
 
 //	IMAGES
 import shochumImg from "../images/shochum.jpg";
-import aippmImg from "../images/aippm.jpg";
-import marveldcImg from "../images/marvelvsdc.jpg";
+// import aippmImg from "../images/aippm.jpg";
+// import marveldcImg from "../images/marvelvsdc.jpg";
 import unhrcImg from "../images/unhrc.jpg";
 import unscImg from "../images/unsc.jpg";
 import unwomenImg from "../images/unwomen.jpg";
@@ -50,19 +50,28 @@ class Agenda extends PureComponent {
 			alt: "shochum.jpg",
 			agTitle: "SHOCHUM",
 			description: "Protecting the cultural identities with regard to the alarming increase of Islamophobia.",
-		}
+		};
 	}
 	componentDidMount() {
 		// setTimeout(function () { this.setState({ animation }) })
 		let iterationNumber = this.state.iterationNumber + 1;
-		iterationNumber = iterationNumber === committees.length ? 0 : iterationNumber
-		setTimeout(function () { this.setState({ ...committees[iterationNumber], iterationNumber }) }.bind(this), 6000)
-
+		iterationNumber = iterationNumber === committees.length ? 0 : iterationNumber;
+		setTimeout(
+			function() {
+				this.setState({ ...committees[iterationNumber], iterationNumber });
+			}.bind(this),
+			6000
+		);
 	}
 	componentDidUpdate() {
 		let iterationNumber = this.state.iterationNumber + 1;
-		iterationNumber = iterationNumber === committees.length ? 0 : iterationNumber
-		setTimeout(function () { this.setState({ ...committees[iterationNumber], iterationNumber }) }.bind(this), 6000)
+		iterationNumber = iterationNumber === committees.length ? 0 : iterationNumber;
+		setTimeout(
+			function() {
+				this.setState({ ...committees[iterationNumber], iterationNumber });
+			}.bind(this),
+			6000
+		);
 	}
 	render() {
 		return (
@@ -85,7 +94,7 @@ class Agendas extends PureComponent {
 					<title>Agendas | CMS MUN</title>
 				</Helmet>
 				<h1>Agendas</h1>
-				
+
 				{/* <Agenda img={aippmImg} alt="aippmg.jpg" agTitle="All India Political Parties Meet">
 					IC 814 Plane Hijack.
 				</Agenda>
