@@ -18,8 +18,8 @@ class Navigation extends PureComponent {
 							this.setState({
 								animationName: "shrink",
 								navitems: { transform: "scale(0) translateY(75%)", opacity: 0 },
-								navMinHeight: 0,
-								navMinWidth: 0,
+								// navMinHeight: 0,
+								// navMinWidth: 0,
 							});
 							setTimeout(
 								() => (this.state.animationName === "shrink" ? this.setState({ display: "none" }) : ""),
@@ -33,9 +33,9 @@ class Navigation extends PureComponent {
 								display: "flex",
 								navitems: { transform: "scale(1) translateY(75%)", opacity: 1 },
 							});
-							setTimeout(() => {
-								this.setState({ navMinHeight: "225px", navMinWidth: "225px" });
-							}, 600);
+							// setTimeout(() => {
+							// 	this.setState({ navMinHeight: "225px", navMinWidth: "225px" });
+							// }, 600);
 						}
 					}}
 				>
@@ -43,7 +43,7 @@ class Navigation extends PureComponent {
 				</div>
 				<div
 					id="navigation"
-					className="bg-black centerize s9em"
+					className="bg-black centerize s7em questrial"
 					style={{
 						display: this.state.display,
 						animationName: this.state.animationName,
@@ -57,12 +57,12 @@ class Navigation extends PureComponent {
 					<Link to="/about-us" style={this.state.navitems}>
 						About&nbsp;us
 					</Link>
-					<Link to="/contact" style={this.state.navitems}>
+					{/* <Link to="/contact" style={this.state.navitems}>
 						Contact
 					</Link>
 					<Link to="/agendas" style={this.state.navitems}>
 						Agendas
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 		);
