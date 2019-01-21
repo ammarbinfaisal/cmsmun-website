@@ -1,9 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Nav from "../components/Navigation";
 import Layout from "../components/Layout";
-
-import "../sass/aboutus.sass";
 
 const About = () => (
 	<Layout id="about-us">
