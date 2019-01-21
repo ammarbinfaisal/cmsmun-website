@@ -1,10 +1,7 @@
 import React, { PureComponent } from "react";
 import Layout from "../components/Layout";
-import Footer from "../components/Footer";
 
 import logo from "../images/logo3.svg";
-
-import "../sass/style.sass";
 
 const Intro = () => (
 	<div id="intro" className="white bg-fixed lato">

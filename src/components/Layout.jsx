@@ -4,6 +4,8 @@ import Helmet from "react-helmet";
 import Navigation from "./Navigation";
 
 import "./reset.css";
+import "../sass/style.sass";
+import "../sass/aboutus.sass"
 import Footer from "./Footer";
 
 class Layout extends PureComponent {
