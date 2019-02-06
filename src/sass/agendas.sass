@@ -1,88 +1,10 @@
-@import "./mixins.sass"
+// @import "./mixins.sass"
+
+body
+    width: 100%
+    height: 100vh
 
 #agendas
-    +columnify
-    height: 100vh
-    background-color: #000
-    h1
-        +resp-font(2.3em)
-        color: #eee
-
-.agenda
-    +columnify
-    margin: 5vh 4vw
-    width: 90%
-    max-width: 700px
-    height: 70vh
-    background-color: #0d0d0d
-    padding: 6vh 2vw
-    border-radius: 8px
-    overflow: hidden
-    color: #eee
-
-    h3, img
-        animation: 
-            name: fadeIn
-            duration: 1s
-            fill-mode: forwards
-            iteration-count: infinite
-
-    h3
-        text-align: center
-        font-family: questrial, sans-serif
-        padding: 0 5vw
-        +resp-font(1.4em)
-        text-decoration: underline
-
     img
-        width: 50%
-        max-width: 350px
-        margin: 6vh 0
-
-    .info
-        +resp-font(.9em)
-        width: 70%
-        text-align: center
-        animation: 
-            name: fadeUp
-            duration:  1s
-            fill-mode: forwards
-            iteration-count: infinite
-        @media (max-width: 600px)
-            width: 90%
-            max-width: 300px
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-
-@keyframes fadeIn
-    0%
-        transform: scale(0.6)
-        opacity: 0
-    100%
-        transform: scale(1)
-        opacity: 1
-    
-@keyframes fadeOut
-    0%
-        transform: scale(1)
-        opacity: 1
-    100%
-        transfomr: scale(0.6)
-        opacity: 0
-
-@keyframes fadeUpIn
-    0%
-        transform: translateY(5.5vh)
-        opacity: 0
-    100%
-        transform: translateY(0%)
-        opacity: 1
-    
-
-@keyframes fadeUpOut
-    0%
-        transform: translateY(0%)
-        opacity: 1
-    100%
-        transform: translateY(-6vh)
-        opacity: 0
-    
+        margin: 0 24px
+        height: 60%

@@ -11,10 +11,10 @@ const Intro = () => (
 			<h1>CMSMUN ALIGANJ</h1>
 			<h3>2019</h3>
 			<i
-				className="fas fa-sort-down white"
+				className="fas fa-angle-down white"
 				onClick={e =>
 					window.scrollTo({
-						top: getComputedStyle(document.querySelector("#intro")).height.split("px")[0],
+						top: getComputedStyle(document.querySelector("#intro")).height.split("px")[0] || window.innerHeight,
 						behavior: "smooth",
 					})
 				}

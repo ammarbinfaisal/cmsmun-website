@@ -17,19 +17,23 @@
 
   .logo
     height: calc(5vh + 100px)
+    max-height: 430px
+    min-height: 200px
+    @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
+      height: calc(10vh + 100px)
     @media (max-height: 600px)
       height: 150px
       height: 20vh
-    min-height: 200px
     @media (max-height: 750px)
       min-height: 150px
-    max-height: 430px
 
   h3
     @media (max-width: 600px)
       +resp-font(2em)
     @media (min-width: 600px)
-      +resp-font(2.6em)
+      +resp-font(2.4em)
+    @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
+      +resp-font(2.8em)
 
   h1
     @media (max-width: 430px)
@@ -40,7 +44,10 @@
       font-size: calc(1.2vw + 2em)
     @media (min-width: 600px)
       font-size: 2.5em
-      font-size: calc(.6vh + .8vw + 2.2em)  
+      font-size: calc(.6vh + .8vw + 2.2em)
+    @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
+      font-size: 3em
+      font-size: calc(.6vh + .8vw + 3.5em)
 
 
   h2
@@ -54,6 +61,8 @@
     @media (min-width: 750px)
       max-width: 80vw
       +resp-font(1.8em)
+    @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
+      +resp-font(3em)
     @media (max-width: 750px)  and (min-width: 430px)
       max-width: 90vw
       +resp-font(1.6em)
@@ -68,9 +77,12 @@
         content: '-'
         margin-left: 8px
 
-  .fa-sort-down
-    color: 
-    font-size: calc(.8vh + .8vw + 4em)
+  .fa-angle-down
+    font-size: calc(.4vh + .2vw + 4em)
+    @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
+      font-size: calc(.4vh + .2vw + 6em)
+    margin: 30px
+    margin: 5vh
     cursor: pointer
     animation:
       name: wiggle
@@ -85,6 +97,6 @@
   40%
     transform: translateY(8px)
   60%
-    transform: translateY(6px)
+    transform: translateY(2px)
   100%
     transform: translateY(0)
