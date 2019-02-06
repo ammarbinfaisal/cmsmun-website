@@ -14,7 +14,9 @@ const Intro = () => (
 				className="fas fa-angle-down white"
 				onClick={e =>
 					window.scrollTo({
-						top: getComputedStyle(document.querySelector("#intro")).height.split("px")[0] || window.innerHeight,
+						top:
+							getComputedStyle(document.querySelector("#intro")).height.split("px")[0] ||
+							window.innerHeight,
 						behavior: "smooth",
 					})
 				}
