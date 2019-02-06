@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 
 import "./reset.css";
 import "../sass/style.sass";
-import "../sass/aboutus.sass"
+import "../sass/aboutus.sass";
 import Footer from "./Footer";
 
 class Layout extends PureComponent {
@@ -29,7 +29,7 @@ class Layout extends PureComponent {
 				<div id={this.props.id} style={this.props.style}>
 					{this.props.children}
 				</div>
-				<Footer/>
+				<Footer />
 			</div>
 		);
 	}
