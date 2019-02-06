@@ -15,7 +15,7 @@ const Footer = () => (
 			</div>
 		</div>
 		<div id="info">
-			<h4 >CMS MUN</h4>
+			<h4 >CMSMUN ALIGANJ</h4>
 			<p className="white s9em">on 13th and 14th April</p>
 		</div>
 	</div>

@@ -56,12 +56,9 @@ class Navigation extends PureComponent {
 					<Link to="/about-us" style={this.state.navitems}>
 						About&nbsp;us
 					</Link>
-					{/* <Link to="/contact" style={this.state.navitems}>
-						Contact
+					<Link to="/committees" style={this.state.navitems}>
+						Committees
 					</Link>
-					<Link to="/agendas" style={this.state.navitems}>
-						Agendas
-					</Link> */}
 				</div>
 			</div>
 		);

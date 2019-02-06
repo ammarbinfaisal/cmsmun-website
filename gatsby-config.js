@@ -23,6 +23,14 @@ module.exports = {
                 includePaths: ["src/sass/"],
             },
         },
+        "gatsby-plugin-purgecss",
+        //{
+        //    resolve: `gatsby-source-filesystem`,
+        //    options: {
+        //        name: `images`,
+        //        path: `${__dirname}/src/images/`,
+        //    },
+        //},
         // {
         //     resolve: 'gatsby-plugin-react-svg',
         //     options: {
@@ -31,7 +39,7 @@ module.exports = {
         //         }
         //     }
         // },
-        // "gatsby-plugin-sitemap",
+        "gatsby-plugin-sitemap",
         "gatsby-plugin-offline",
     ],
 };
