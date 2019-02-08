@@ -55,23 +55,19 @@
 @keyframes grow
     0%
         border-bottom-left-radius:  400%
-        width: 0
-        height: 0
+        transform: scale(0)
         padding: 0
     100%
         border-bottom-left-radius: 300%
-        width: 32vh
-        height: 32vh
+        transform: scale(1)
         padding: 5vh 5vw
 
 @keyframes shrink
     0%
         border-bottom-left-radius:  400%
-        width: 32vh
-        height: 32vh
+        transform: scale(1)
         padding: 5vh 5vw
     100%
         border-bottom-left-radius: 300%
-        width: 0
-        height: 0
+        transform: scale(0)
         padding: 0
