@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: "CMS Aliganj's Model United Nations",
-        siteUrl: "https://cmsmun.netlify.com"
+        title: "CMS Aliganj Model United Nations",
+        siteUrl: "https://cmsmunaliganj.com"
     },
     plugins: [
         "gatsby-plugin-react-helmet",
@@ -24,21 +24,15 @@ module.exports = {
             },
         },
         "gatsby-plugin-purgecss",
-        //{
-        //    resolve: `gatsby-source-filesystem`,
-        //    options: {
-        //        name: `images`,
-        //        path: `${__dirname}/src/images/`,
-        //    },
-        //},
-        // {
-        //     resolve: 'gatsby-plugin-react-svg',
-        //     options: {
-        //         rule: {
-        //             include: /assets/
-        //         }
-        //     }
-        // },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `committees`,
+                path: `${__dirname}/src/images/committees`
+            },
+        },
+        "gatsby-transformer-sharp",
+        "gatsby-plugin-sharp",
         "gatsby-plugin-sitemap",
         "gatsby-plugin-offline",
     ],
