@@ -17,8 +17,6 @@ class Navigation extends PureComponent {
 							this.setState({
 								animationName: "shrink",
 								navitems: { transform: "scale(0)", opacity: 0 },
-								// navMinHeight: 0,
-								// navMinWidth: 0,
 							});
 							setTimeout(
 								() => (this.state.animationName === "shrink" ? this.setState({ display: "none" }) : ""),
@@ -32,9 +30,6 @@ class Navigation extends PureComponent {
 								display: "flex",
 								navitems: { transform: "scale(1)", opacity: 1 },
 							});
-							// setTimeout(() => {
-							// 	this.setState({ navMinHeight: "225px", navMinWidth: "225px" });
-							// }, 600);
 						}
 					}}
 				>
@@ -46,8 +41,9 @@ class Navigation extends PureComponent {
 					style={{
 						display: this.state.display,
 						animationName: this.state.animationName,
-						minHeight: this.state.navMinHeight,
-						minWidth: this.state.navMinWidth,
+						width: this.state.animationName === "grow" && typeof window !== "undefined" ? `${window.innerHeight / 2.5}px` : "",
+						height: this.state.animationName === "grow" && typeof window !== "undefined" ? `${window.innerHeight / 2.5}px` : "",
+						transformOrigin: "top right"
 					}}
 				>
 					<Link to="/" style={this.state.navitems}>
@@ -59,6 +55,14 @@ class Navigation extends PureComponent {
 					<Link to="/committees" style={this.state.navitems}>
 						Committees
 					</Link>
+					<a
+						href="https://l.instagram.com/?u=https%3A%2F%2Fgoo.gl%2Fforms%2FAeSSUhvuOamgNsJf2&e=ATOw3C7c6bwl0OB-2V77jk0Mu3cD1sx0g1ls0PzehtQ9dgJHlTZaYIV8qrVEeSbLVUoGl3ct2T30mJnrVDXYrwXot28H-u4H"
+						target="_blank"
+						rel="noopener noreferrer"
+						style={this.state.navitems}
+					>
+						Form
+					</a>
 				</div>
 			</div>
 		);
