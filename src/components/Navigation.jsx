@@ -16,7 +16,7 @@ class Navigation extends PureComponent {
 						if (this.state.display === "flex") {
 							this.setState({
 								animationName: "shrink",
-								navitems: { transform: "scale(0)", opacity: 0 },
+								navitems: { transform: "scale(0) translateY(20%)", opacity: 0 },
 							});
 							setTimeout(
 								() => (this.state.animationName === "shrink" ? this.setState({ display: "none" }) : ""),
@@ -28,7 +28,7 @@ class Navigation extends PureComponent {
 							this.setState({
 								animationName: "grow",
 								display: "flex",
-								navitems: { transform: "scale(1)", opacity: 1 },
+								navitems: { transform: "scale(1) translateY(20%)", opacity: 1 },
 							});
 						}
 					}}
@@ -43,11 +43,15 @@ class Navigation extends PureComponent {
 						animationName: this.state.animationName,
 						width:
 							this.state.animationName === "grow" && typeof window !== "undefined"
-								? `${window.innerHeight / 1.6}px`
+								? window.innerHeight < 600 
+									? `${window.innerHeight / 2.4}px`
+									: `${window.innerHeight / 1.8}px`
 								: "",
 						height:
 							this.state.animationName === "grow" && typeof window !== "undefined"
-								? `${window.innerHeight / 1.6}px`
+								? window.innerHeight < 600 
+								? `${window.innerHeight / 2.4}px`
+								: `${window.innerHeight / 1.8}px`
 								: "",
 						transformOrigin: "top right",
 					}}
