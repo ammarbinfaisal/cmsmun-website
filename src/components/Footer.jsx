@@ -6,7 +6,11 @@ const Footer = () => (
 		<div id="social">
 			<h4>Find us on</h4>
 			<div id="social-icons">
-				<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Cmsmun-Aliganj-261301907871830/">
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://www.facebook.com/Cmsmun-Aliganj-261301907871830/"
+				>
 					<i className="fab fa-facebook-square" />
 				</a>
 				<a target="_blank" rel="noopener noreferrer" href="https://instagram.com/cmsmun_aliganj">

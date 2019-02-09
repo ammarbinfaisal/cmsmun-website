@@ -31,8 +31,7 @@ class Agendas extends PureComponent {
 				>
 					<div
 						style={{
-							width: `${this.props.data.allFile.edges[0].imageWidth *
-								5}px`,
+							width: `${this.props.data.allFile.edges[0].imageWidth * 5}px`,
 							padding: "0 30px",
 							display: "flex",
 							justifyContent: "flexStart",
@@ -47,21 +46,19 @@ class Agendas extends PureComponent {
 									key={node.childImageSharp.id}
 									style={{
 										width:
-											typeof window !== "undefined" ?
-												window.innerWidth <= 400
+											typeof window !== "undefined"
+												? window.innerWidth <= 400
 													? `${imageWidth / 2}px`
 													: window.innerWidth < 800
-														? `${(imageWidth * 2) / 3}px`
-														: `${imageWidth}px`
+													? `${(imageWidth * 2) / 3}px`
+													: `${imageWidth}px`
 												: `${imageWidth}px`,
 										margin: "0 30px",
-										boxSizing: "content-box"
+										boxSizing: "content-box",
 									}}
 								/>
-							)
-						}
-						)
-						}
+							);
+						})}
 					</div>
 				</div>
 				{/* </div> */}
