@@ -16,7 +16,12 @@ class Navigation extends PureComponent {
 						if (this.state.display === "flex") {
 							this.setState({
 								animationName: "shrink",
-								navitems: { transform: `scale(1) ${ window.innerWidth < 800 ? "translateY(5%)": "translateY(35%)" }`, opacity: 0 },
+								navitems: {
+									transform: `scale(1) ${
+										window.innerWidth < 800 ? "translateY(5%)" : "translateY(35%)"
+									}`,
+									opacity: 0,
+								},
 							});
 							setTimeout(
 								() => (this.state.animationName === "shrink" ? this.setState({ display: "none" }) : ""),
@@ -28,7 +33,12 @@ class Navigation extends PureComponent {
 							this.setState({
 								animationName: "grow",
 								display: "flex",
-								navitems: { transform: `scale(1) ${ window.innerWidth < 800 ? "translateY(5%)": "translateY(35%)" }`, opacity: 1 },
+								navitems: {
+									transform: `scale(1) ${
+										window.innerWidth < 800 ? "translateY(5%)" : "translateY(35%)"
+									}`,
+									opacity: 1,
+								},
 							});
 						}
 					}}
@@ -45,13 +55,17 @@ class Navigation extends PureComponent {
 							this.state.animationName === "grow" && typeof window !== "undefined"
 								? window.innerWidth <= 400
 									? `${window.innerWidth * 0.9}px`
-									:  window.innerWidth < 800 ? `${window.innerHeight / 2}px` : `${window.innerHeight / 1.6}px`
+									: window.innerWidth < 800
+									? `${window.innerHeight / 2}px`
+									: `${window.innerHeight / 1.6}px`
 								: "",
 						height:
 							this.state.animationName === "grow" && typeof window !== "undefined"
 								? window.innerWidth <= 400
 									? `${window.innerWidth * 0.9}px`
-									: window.innerWidth < 800 ? `${window.innerHeight / 2}px` : `${window.innerHeight / 1.6}px`
+									: window.innerWidth < 800
+									? `${window.innerHeight / 2}px`
+									: `${window.innerHeight / 1.6}px`
 								: "",
 						transformOrigin: "top right",
 					}}
