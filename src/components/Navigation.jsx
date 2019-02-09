@@ -41,9 +41,15 @@ class Navigation extends PureComponent {
 					style={{
 						display: this.state.display,
 						animationName: this.state.animationName,
-						width: this.state.animationName === "grow" && typeof window !== "undefined" ? `${window.innerHeight / 2.5}px` : "",
-						height: this.state.animationName === "grow" && typeof window !== "undefined" ? `${window.innerHeight / 2.5}px` : "",
-						transformOrigin: "top right"
+						width:
+							this.state.animationName === "grow" && typeof window !== "undefined"
+								? `${window.innerHeight / 2.5}px`
+								: "",
+						height:
+							this.state.animationName === "grow" && typeof window !== "undefined"
+								? `${window.innerHeight / 2.5}px`
+								: "",
+						transformOrigin: "top right",
 					}}
 				>
 					<Link to="/" style={this.state.navitems}>

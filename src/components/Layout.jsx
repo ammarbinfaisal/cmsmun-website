@@ -2,11 +2,15 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 import "./reset.css";
 import "../sass/style.sass";
 import "../sass/aboutus.sass";
-import Footer from "./Footer";
+
+import ReactGA from "react-ga";
+ReactGA.initialize("UA-134084954-3");
+if (typeof window !== "undefined") ReactGA.pageview(window.location.pathname + window.location.search);
 
 class Layout extends PureComponent {
 	render() {
