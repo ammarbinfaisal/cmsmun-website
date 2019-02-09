@@ -40,7 +40,6 @@ class Agendas extends PureComponent {
 					>
 						{this.props.data.allFile.edges.map(({ node }) => {
 							const imageWidth = node.childImageSharp.fluid.presentationWidth;
-							console.log(imageWidth)
 							return (
 								<Img
 									fluid={node.childImageSharp.fluid}
@@ -51,8 +50,8 @@ class Agendas extends PureComponent {
 												? window.innerWidth <= 450
 													? `${imageWidth / 2}px`
 													: window.innerWidth < 800
-														? `${(imageWidth * 2) / 3}px`
-														: `${imageWidth}px`
+													? `${(imageWidth * 2) / 3}px`
+													: `${imageWidth}px`
 												: `450px`,
 										margin: "0 30px",
 										boxSizing: "content-box",
