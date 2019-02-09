@@ -26,7 +26,7 @@ class Layout extends PureComponent {
 					/>
 					<meta
 						name="description"
-						content="City Montessori School Aliganj's Model United Nations (CMSMUN Aliganj)"
+						content="City Montessori School Aliganj Model United Nations (CMSMUN Aliganj)"
 					/>
 				</Helmet>
 				<Navigation />
