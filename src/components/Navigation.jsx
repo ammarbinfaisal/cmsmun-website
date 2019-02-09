@@ -62,7 +62,7 @@ class Navigation extends PureComponent {
 						Committees
 					</Link>
 					<a
-						href="https://l.instagram.com/?u=https%3A%2F%2Fgoo.gl%2Fforms%2FAeSSUhvuOamgNsJf2&e=ATOw3C7c6bwl0OB-2V77jk0Mu3cD1sx0g1ls0PzehtQ9dgJHlTZaYIV8qrVEeSbLVUoGl3ct2T30mJnrVDXYrwXot28H-u4H"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSctF4ZZxFENsaHI7r_OoJyUCjS5xRhI-gURrUqXei-jklAD4Q/viewform"
 						target="_blank"
 						rel="noopener noreferrer"
 						style={this.state.navitems}
