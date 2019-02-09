@@ -43,11 +43,11 @@ class Navigation extends PureComponent {
 						animationName: this.state.animationName,
 						width:
 							this.state.animationName === "grow" && typeof window !== "undefined"
-								? `${window.innerHeight / 2.5}px`
+								? `${window.innerHeight / 1.6}px`
 								: "",
 						height:
 							this.state.animationName === "grow" && typeof window !== "undefined"
-								? `${window.innerHeight / 2.5}px`
+								? `${window.innerHeight / 1.6}px`
 								: "",
 						transformOrigin: "top right",
 					}}
@@ -67,7 +67,7 @@ class Navigation extends PureComponent {
 						rel="noopener noreferrer"
 						style={this.state.navitems}
 					>
-						Form
+						Individual Delegation
 					</a>
 				</div>
 			</div>
