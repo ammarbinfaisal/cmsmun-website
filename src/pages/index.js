@@ -21,12 +21,12 @@ const Intro = () => (
 					})
 				}
 			/>
-			<Link
+			{/* <Link
 				className="s7em"
 				style={{ position: "absolute", bottom: "50px", left: 0, transform: "rotate(90deg)" }}
 			>
 				Registration Forms
-			</Link>
+			</Link> */}
 		</div>
 	</div>
 );
