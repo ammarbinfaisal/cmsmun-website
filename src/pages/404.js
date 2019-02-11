@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-import "../sass/page.sass";
+import "../sass/404.sass";
 
 const NotFoundPage = () => (
 	<div id="404" className="404-page" style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
