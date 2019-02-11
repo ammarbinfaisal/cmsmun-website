@@ -12,14 +12,14 @@ const About = () => (
 				<h1>Forms</h1>
 				<div className="centerize form-links" style={{padding: "50px 0", lineHeight: "2"}}>
                     <a
-						href="https://docs.google.com/forms/d/e/1FAIpQLSctF4ZZxFENsaHI7r_OoJyUCjS5xRhI-gURrUqXei-jklAD4Q/viewform"
+						href="https://cmsmunaliganj.com/individual-delegation"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						Individual Delegation
 					</a>
 					<a
-						href="https://docs.google.com/forms/d/1jVAnq1yi8_8XIGBD2CS0UkP1xT_rNI6nFOrHGwwejgY/viewform"
+						href="https://cmsmunaliganj.com/international-press"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
