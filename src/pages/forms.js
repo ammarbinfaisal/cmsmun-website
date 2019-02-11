@@ -10,8 +10,8 @@ const About = () => (
 		<div className="white-overlay black">
 			<div className="questrial s9em fw700">
 				<h1>Forms</h1>
-				<div className="centerize" style={{padding: "50px", lineHeight: "2"}}>
-                <a
+				<div className="centerize form-links" style={{padding: "50px", lineHeight: "2"}}>
+                    <a
 						href="https://docs.google.com/forms/d/e/1FAIpQLSctF4ZZxFENsaHI7r_OoJyUCjS5xRhI-gURrUqXei-jklAD4Q/viewform"
 						target="_blank"
 						rel="noopener noreferrer"
