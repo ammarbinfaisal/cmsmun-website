@@ -35,7 +35,7 @@ class Navigation extends PureComponent {
 								display: "flex",
 								navitems: {
 									transform: `scale(1) ${
-										window.innerWidth < 800 ? "translateY(5%)" : "translateY(35%)"
+										window.innerWidth < 800 ? "" : "translateY(20%)"
 									}`,
 									opacity: 1,
 								},
@@ -86,6 +86,14 @@ class Navigation extends PureComponent {
 						style={this.state.navitems}
 					>
 						Individual Delegation
+					</a>
+					<a
+						href="https://docs.google.com/forms/d/1jVAnq1yi8_8XIGBD2CS0UkP1xT_rNI6nFOrHGwwejgY/"
+						target="_blank"
+						rel="noopener noreferrer"
+						style={this.state.navitems}
+					>
+						International Press
 					</a>
 				</div>
 			</div>
