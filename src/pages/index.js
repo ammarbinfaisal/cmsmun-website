@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import Layout from "../components/Layout";
-
+import { Link } from "gatsby"
 import logo from "../images/logo3.svg";
 
 const Intro = () => (
@@ -21,6 +21,12 @@ const Intro = () => (
 					})
 				}
 			/>
+			<Link
+				className="s7em"
+				style={{ position: "absolute", bottom: "50px", left: 0, transform: "rotate(90deg)" }}
+			>
+				Registration Forms
+			</Link>
 		</div>
 	</div>
 );

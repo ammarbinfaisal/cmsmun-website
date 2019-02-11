@@ -4,16 +4,15 @@ import Layout from "../components/Layout";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
 
-import "../sass/agendas.sass";
+import "../sass/committees.sass";
 
 class Agendas extends PureComponent {
 	render() {
 		return (
-			<Layout id="agendas">
+			<Layout id="committees" style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
 				<Helmet>
-					<title>Committess | CMSMUN ALIGANJ</title>
+					<title>Committees | CMSMUN ALIGANJ</title>
 				</Helmet>
-				{/* <div className="slider-child valign-center" style={{ width: "100%", height: "90vh", overflow: "hidden", position: "relative" }}> */}
 				<div
 					style={{
 						height:
@@ -26,7 +25,7 @@ class Agendas extends PureComponent {
 						display: "flex",
 						justifyContent: "flexStart",
 						alignItems: "center",
-						overflowX: "scroll",
+						overflowX: "scroll"
 					}}
 				>
 					<div
@@ -49,8 +48,8 @@ class Agendas extends PureComponent {
 											typeof window !== "undefined"
 												? window.innerWidth <= 450
 													? `${imageWidth / 2}px`
-													: window.innerWidth < 800
-													? `${(imageWidth * 2) / 3}px`
+													: window.innerWidth < 1080
+													? `${(imageWidth * 3) / 4}px`
 													: `${imageWidth}px`
 												: `450px`,
 										margin: "0 30px",
@@ -77,7 +76,7 @@ export const query = graphql`
 					childImageSharp {
 						id
 						fluid(maxWidth: 720, quality: 100) {
-							...GatsbyImageSharpFluid_tracedSVG
+							...GatsbyImageSharpFluid_withWebp_tracedSVG
 							presentationWidth
 						}
 					}

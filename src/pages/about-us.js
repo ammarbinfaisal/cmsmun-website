@@ -5,9 +5,9 @@ import Layout from "../components/Layout";
 const About = () => (
 	<Layout id="about-us">
 		<Helmet>
-			<title>About Us | CMS ALIGANJ</title>
+			<title>About Us | CMSMUN ALIGANJ</title>
 		</Helmet>
-		<div className="white-overlay black">
+		<div className="white-overlay black full-page">
 			<div className="questrial s9em fw700">
 				<h1>About us</h1>
 				<p className="text">
