@@ -3,11 +3,11 @@ import Helmet from "react-helmet";
 import Layout from "../components/Layout";
 
 const About = () => (
-	<Layout id="about-us">
+	<Layout id="forms">
 		<Helmet>
-			<title>About Us | CMS ALIGANJ</title>
+			<title>Forms | CMSMUN ALIGANJ</title>
 		</Helmet>
-		<div className="white-overlay black">
+		<div className="white-overlay black full-page">
 			<div className="questrial s9em fw700">
 				<h1>Forms</h1>
 				<div className="centerize form-links" style={{padding: "50px 0", lineHeight: "2"}}>

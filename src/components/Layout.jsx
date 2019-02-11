@@ -15,7 +15,7 @@ if (typeof window !== "undefined") ReactGA.pageview(window.location.pathname + w
 class Layout extends PureComponent {
 	render() {
 		return (
-			<div id="layout-root">
+			<div id="layout-root" style={this.props.style}>
 				<Helmet>
 					<title>CMS Aliganj's Model United Nations</title>
 					<link
@@ -30,7 +30,7 @@ class Layout extends PureComponent {
 					/>
 				</Helmet>
 				<Navigation />
-				<div id={this.props.id} style={this.props.style}>
+				<div id={this.props.id}>
 					{this.props.children}
 				</div>
 				<Footer />
