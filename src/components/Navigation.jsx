@@ -79,22 +79,9 @@ class Navigation extends PureComponent {
 					<Link to="/committees" style={this.state.navitems}>
 						Committees
 					</Link>
-					<a
-						href="https://docs.google.com/forms/d/e/1FAIpQLSctF4ZZxFENsaHI7r_OoJyUCjS5xRhI-gURrUqXei-jklAD4Q/viewform"
-						target="_blank"
-						rel="noopener noreferrer"
-						style={this.state.navitems}
-					>
-						Individual Delegation
-					</a>
-					<a
-						href="https://docs.google.com/forms/d/1jVAnq1yi8_8XIGBD2CS0UkP1xT_rNI6nFOrHGwwejgY/"
-						target="_blank"
-						rel="noopener noreferrer"
-						style={this.state.navitems}
-					>
-						International Press
-					</a>
+					<Link to="/forms" style={this.state.navitems}>
+						Forms
+					</Link>
 				</div>
 			</div>
 		);
