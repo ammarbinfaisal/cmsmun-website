@@ -19,7 +19,7 @@ const About = () => (
 						Individual Delegation
 					</a>
 					<a
-						href="https://docs.google.com/forms/d/1jVAnq1yi8_8XIGBD2CS0UkP1xT_rNI6nFOrHGwwejgY/"
+						href="https://docs.google.com/forms/d/1jVAnq1yi8_8XIGBD2CS0UkP1xT_rNI6nFOrHGwwejgY/viewform"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
