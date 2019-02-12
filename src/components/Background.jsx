@@ -9,8 +9,8 @@ class Background extends PureComponent {
             height: "100vh",
             width: "100%",
             opacity: 1,
-            i: Number(localStorage.getItem("indexI")) || 0,
-            j: Number(localStorage.getItem("indexJ")) || 1
+            i: typeof window !== "undefined" ? Number(localStorage.getItem("indexI")) || 0 : 0,
+            j: typeof window !== "undefined" ? Number(localStorage.getItem("indexJ")) || 1 : 1
         }
     }
     componentDidMount() {
