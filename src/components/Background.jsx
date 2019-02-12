@@ -5,13 +5,12 @@ import { StaticQuery, graphql } from "gatsby";
 class Background extends PureComponent {
     constructor(props) {
         super(props);
-        console.log(props)
         this.state = {
             height: "100vh",
             width: "100%",
             opacity: 1,
-            i: 0,
-            j: 1
+            i: Number(localStorage.getItem("indexI")) || 0,
+            j: Number(localStorage.getItem("indexJ")) || 1
         }
     }
     componentDidMount() {
@@ -20,7 +19,10 @@ class Background extends PureComponent {
                 this.setState({ opacity: 0 })
             }, 5000);
             this.setState({ i: this.state.i + 1 < 4 ? this.state.i + 1 : 0, opacity: 1 });
+            localStorage.setItem("indexI", this.state.i);
             this.setState({ j: this.state.i + 1 < 4 ? this.state.i + 1 : 0})
+            localStorage.setItem("indexJ", this.state.j);
+            console.log(this.state.i, this.state.j)
         }, 6000);
     }
     render() {
@@ -33,7 +35,7 @@ class Background extends PureComponent {
                             childImageSharp {
                                 id
                                 fluid(maxWidth: 720, quality: 100) {
-                                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                                    ...GatsbyImageSharpFluid_withWebp
                                     presentationWidth
                                 }
                             }

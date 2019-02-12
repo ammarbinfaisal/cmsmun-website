@@ -8,9 +8,9 @@ const About = () => (
 			<title>About Us | CMSMUN ALIGANJ</title>
 		</Helmet>
 		<div className="white-overlay black">
-			<div className="questrial s9em fw700" id="about-us-text">
+			<div className="questrial s9em" >
 				<h1>About us</h1>
-				<p className="text">
+				<p id="about-us-text">
 					City Montessori School (CMS) is the world’s largest school, with over 55,000 students and 4,500
 					staff across 18 campuses in the city of Lucknow. Founded in 1959 with 5 children on a borrowed
 					capital of 300 Rupees by Dr Jagdish Gandhi and Dr Bharti Gandhi, CMS today is an ICSE- and
