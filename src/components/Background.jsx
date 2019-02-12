@@ -18,12 +18,11 @@ class Background extends PureComponent {
             setInterval(() => {
                 setTimeout(() => {
                     this.setState({ opacity: 0 })
-                }, 5000);
+                }, 4500);
                 this.setState({ i: this.state.i + 1 < 3 ? this.state.i + 1 : 0, opacity: 1 });
                 localStorage.setItem("indexI", this.state.i);
                 this.setState({ j: this.state.i + 1 < 3 ? this.state.i + 1 : 0})
                 localStorage.setItem("indexJ", this.state.j);
-                console.log(this.state.i, this.state.j)
             }, 6000);
         }
     }
@@ -70,7 +69,7 @@ class Background extends PureComponent {
                                         left: 0,
                                         height: this.state.height,
                                         width: this.state.width,
-                                        transition: "1s",
+                                        transition: "1.5s",
                                     }}
                                 />
                                 <Img
