@@ -14,16 +14,18 @@ class Background extends PureComponent {
         }
     }
     componentDidMount() {
-        setInterval(() => {
-            setTimeout(() => {
-                this.setState({ opacity: 0 })
-            }, 5000);
-            this.setState({ i: this.state.i + 1 < 4 ? this.state.i + 1 : 0, opacity: 1 });
-            localStorage.setItem("indexI", this.state.i);
-            this.setState({ j: this.state.i + 1 < 4 ? this.state.i + 1 : 0})
-            localStorage.setItem("indexJ", this.state.j);
-            console.log(this.state.i, this.state.j)
-        }, 6000);
+        if(typeof window !== "undefined"){
+            setInterval(() => {
+                setTimeout(() => {
+                    this.setState({ opacity: 0 })
+                }, 5000);
+                this.setState({ i: this.state.i + 1 < 4 ? this.state.i + 1 : 0, opacity: 1 });
+                localStorage.setItem("indexI", this.state.i);
+                this.setState({ j: this.state.i + 1 < 4 ? this.state.i + 1 : 0})
+                localStorage.setItem("indexJ", this.state.j);
+                console.log(this.state.i, this.state.j)
+            }, 6000);
+        }
     }
     render() {
         return (
