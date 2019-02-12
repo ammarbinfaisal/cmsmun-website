@@ -6,7 +6,7 @@ const Intro = () => (
 	<div id="intro" className="white bg-fixed lato">
 		<div>
 			<img src={logo} className="logo" alt="logo" />
-			<h2>City Montessori School, Aliganj Model United Nation</h2>
+			<h2>City Montessori School, Aliganj Model United Nations</h2>
 			<h1>CMSMUN ALIGANJ</h1>
 			<h3>2019</h3>
 			<i
