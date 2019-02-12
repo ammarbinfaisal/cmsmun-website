@@ -69,7 +69,7 @@ class Background extends PureComponent {
                                         left: 0,
                                         height: this.state.height,
                                         width: this.state.width,
-                                        transition: "1.5s",
+                                        transition: "1.5s opacity",
                                     }}
                                 />
                                 <Img

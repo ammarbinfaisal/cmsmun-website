@@ -9,7 +9,7 @@ module.exports = {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: "CMS Aliganj Model United Nations",
-                short_name: "cmsmun aliganj",
+                short_name: "cmsmun",
                 start_url: "/",
                 background_color: "#0e0e0e",
                 theme_color: "#0e0e0e",
