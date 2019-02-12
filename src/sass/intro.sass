@@ -16,7 +16,7 @@
     background-color: rgba(0, 0, 0, 0.7)
 
   .logo
-    height: calc(12vh + 5vw + 100px)
+    height: calc(8vh + 5vw + 100px)
     max-height: 430px
     min-height: 200px
     @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
@@ -38,7 +38,7 @@
   h1
     @media (max-width: 430px)
       font-size: 2em
-      font-size: calc(.2vh + .3vw + 1.8em)  
+      font-size: calc(.2vh + .3vw + 1.6em)  
     @media (max-width: 600px) and (min-width: 430px)
       font-size: 2.4em
       font-size: calc(1.2vw + 2em)
@@ -76,12 +76,13 @@
         content: '-'
         margin-left: 8px
 
-  .fa-angle-down
-    font-size: calc(.4vh + .2vw + 5em)
+  .fa-arrow-down
+    position: absolute
+    bottom: 30px
+    right: 30px
+    font-size: calc(.4vh + .2vw + 2em)
     @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
-      font-size: calc(.4vh + .2vw + 6em)
-    margin: 30px
-    margin: 5vh
+      font-size: calc(.4vh + .2vw + 3em)
     cursor: pointer
     animation:
       name: wiggle
@@ -93,9 +94,9 @@
 @keyframes wiggle
   0%
     transform: translateY(0)
-  40%
-    transform: translateY(8px)
-  60%
+  30%
+    transform: translateY(12px)
+  70%
     transform: translateY(2px)
   100%
     transform: translateY(0)

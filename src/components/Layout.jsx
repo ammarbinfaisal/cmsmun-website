@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import Background from "./Background";
 
 import "./reset.css";
 import "../sass/style.sass";
@@ -29,6 +30,7 @@ class Layout extends PureComponent {
 						content="City Montessori School Aliganj Model United Nations (CMSMUN Aliganj)"
 					/>
 				</Helmet>
+				<Background/>
 				<Navigation />
 				<div id={this.props.id}>
 					{this.props.children}

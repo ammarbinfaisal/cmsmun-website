@@ -12,21 +12,20 @@
   > div
     min-height: 100vh
 
-  /* > div > div*/
-  #invitation-text
-    color: #1e1e1e
-    font-weight: 700
-    line-height: 1.75
-    letter-spacing: 1px
-    margin-bottom: 5vh
-    padding: 20px
-    border: 2px #000 dotted
-    border-radius: 12px
-    @media (min-width: 800px)
-      width: 80%
-    @media (max-width: 800px)
-      width: 85%
-    @media (max-width: 350px)
-      width: 95%
-      padding: 5px
-      border: 0
+/* > div > div*/
+#invitation-text, #about-us-text
+  color: #1e1e1e
+  line-height: 1.75
+  letter-spacing: 1px
+  margin-bottom: 5vh
+  padding: 20px
+  border: 2px #000 dotted
+  border-radius: 12px
+  @media (min-width: 800px)
+    width: 80%
+  @media (max-width: 800px)
+    width: 85%
+  @media (max-width: 420px)
+    width: 95%
+    padding: 2px
+    border: 0
