@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Questrial|Lato:500,900)
+@import url(https://fonts.googleapis.com/css?family=Questrial|Jacques+Francois)
 @import "mixins.sass"
 
 #landing-pg
@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb
 .bg-black
   background-color: #1e1e1e
 .lato
-  font-family: Lato, sans-serif
+  font-family: "Jacques Francois", sans-serif
 .questrial
   font-family: Questrial, sans-serif
   letter-spacing: 1.2px
@@ -63,29 +63,29 @@ body::-webkit-scrollbar-thumb
   width: 100%
   background: rgba(255, 255, 255, 0.8)
 
-body
-  &:before
-    content: ""
-    display: block
-    position: fixed
-    left: 0
-    bottom: 0
-    width: 100%
-    height: 100%
-    z-index: -100
-    transition: .4s
-    background:
-      repeat: no-repeat
-      position: 50% 50%
-      size: cover
-    @media (max-width: 1200px)
-      background-image: url("../images/school.jpeg")
-    @media (min-width: 1200px)
-      background-image: url("../images/school-lg.jpeg")
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+// body
+//   &:before
+//     content: ""
+//     display: block
+//     position: fixed
+//     left: 0
+//     bottom: 0
+//     width: 100%
+//     height: 100%
+//     z-index: -100
+//     transition: .4s
+//     background:
+//       repeat: no-repeat
+//       position: 50% 50%
+//       size: cover
+//     animation:
+//       name: bg-change
+//       duration: 5s
+//       iteration-count: infinite
+//     -webkit-background-size: cover
+//     -moz-background-size: cover
+//     -o-background-size: cover
+//     background-size: cover
 
 
 @import "./intro.sass"

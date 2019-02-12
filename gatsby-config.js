@@ -31,6 +31,13 @@ module.exports = {
                 path: `${__dirname}/src/images/committees`
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `bgs`,
+                path: `${__dirname}/src/images/bgs`
+            },
+        },
         "gatsby-transformer-sharp",
         "gatsby-plugin-sharp",
         "gatsby-plugin-sitemap",

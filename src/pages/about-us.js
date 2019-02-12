@@ -7,8 +7,8 @@ const About = () => (
 		<Helmet>
 			<title>About Us | CMSMUN ALIGANJ</title>
 		</Helmet>
-		<div className="white-overlay black full-page">
-			<div className="questrial s9em fw700">
+		<div className="white-overlay black">
+			<div className="questrial s9em fw700" id="about-us-text">
 				<h1>About us</h1>
 				<p className="text">
 					City Montessori School (CMS) is the world’s largest school, with over 55,000 students and 4,500
