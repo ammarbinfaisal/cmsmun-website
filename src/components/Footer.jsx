@@ -12,10 +12,10 @@ const Footer = () => (
 					rel="noopener noreferrer"
 					href="https://www.facebook.com/Cmsmun-Aliganj-261301907871830/"
 				>
-					<i className="fab fa-facebook-square" />
+					<i className="fab fa-facebook-square" role="image" alt="facebook"/>
 				</a>
 				<a target="_blank" rel="noopener noreferrer" href="https://instagram.com/cmsmun_aliganj">
-					<i className="fab fa-instagram" />
+					<i className="fab fa-instagram" role="image" alt="instagram"/>
 				</a>
 			</div>
 		</div>
