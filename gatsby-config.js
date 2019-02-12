@@ -11,8 +11,8 @@ module.exports = {
                 name: "CMS Aliganj Model United Nations",
                 short_name: "cmsmun aliganj",
                 start_url: "/",
-                background_color: "#1e1e1e",
-                theme_color: "#1e1e1e",
+                background_color: "#0e0e0e",
+                theme_color: "#0e0e0e",
                 display: "minimal-ui",
                 icon: "src/images/logo.png", // This path is relative to the root of the site.
             },
