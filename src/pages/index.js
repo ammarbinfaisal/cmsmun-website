@@ -11,7 +11,6 @@ const Intro = () => (
 			<h3>2019</h3>
 			<i
 				className="fas fa-arrow-down white"
-				style={{position: "absolute", bottom: typeof window !== "undefined" ? `${window.innerHeight * 0.9}px` : "30px", left: 0}}
 				onClick={e =>
 					window.scrollTo({
 						top:
