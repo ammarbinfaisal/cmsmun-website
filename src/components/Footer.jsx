@@ -23,12 +23,6 @@ const Footer = () => (
 			<h4>CMSMUN ALIGANJ</h4>
 			<p className="white s9em">on 13th and 14th April</p>
 		</div>
-		<div id="other-links" className="s9em">
-			<Link to="/">Home</Link>
-			<Link to="/">About Us</Link>
-			<Link to="/">Forms</Link>
-			<Link to="/committees">Committees</Link>
-		</div>
 	</div>
 );
 
