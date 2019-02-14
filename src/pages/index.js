@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import Layout from "../components/Layout";
 import logo from "../images/logo3.svg";
 
-const Intro = () => (
+const Intro = props => (
 	<div id="intro" className="white bg-fixed lato">
 		<div>
 			<img src={logo} className="logo" alt="logo" />
@@ -11,21 +11,25 @@ const Intro = () => (
 			<h3>2019</h3>
 			<i
 				className="fas fa-arrow-down white"
-				onClick={e =>
-					window.scrollTo({
-						top:
-							getComputedStyle(document.querySelector("#intro")).height.split("px")[0] ||
-							window.innerHeight,
-						behavior: "smooth",
-					})
+				style={{ top: props.arrowOffset, opacity: props.arrowOpacity }}
+				onClick={e => {
+					if (typeof window.scrollTo)
+						window.scrollTo({
+							top:
+								getComputedStyle(document.querySelector("#intro")).height.split("px")[0] ||
+								window.innerHeight,
+							behavior: "smooth",
+						})
+					else if (typeof window.scroll)
+						window.scroll({
+							top:
+								getComputedStyle(document.querySelector("#intro")).height.split("px")[0] ||
+								window.innerHeight,
+							behavior: "smooth",
+						})
+				}
 				}
 			/>
-			{/* <Link
-				className="s7em"
-				style={{ position: "absolute", bottom: "50px", left: 0, transform: "rotate(90deg)" }}
-			>
-				Registration Forms
-			</Link> */}
 		</div>
 	</div>
 );
@@ -68,10 +72,30 @@ class Message extends PureComponent {
 }
 
 class IndexPage extends PureComponent {
+
+	constructor() {
+		super();
+		this.state = {
+			arrowOffset: `${window.innerHeight * 0.9}px`,
+			arrowOpacity: (typeof window.scrollTo || typeof window.scroll) ? 0.6 : 0
+		}
+	}
+
+	adjustArrowOnScroll() {
+		setTimeout(() => {
+			this.setState({ arrowOffset: `${window.innerHeight * 0.9}px`, arrowOpacity: 1 })
+		}, 200);
+		window.removeEventListener("scroll", this.adjustArrowOnScroll)
+	}
+
+	componentDidMount() {
+		window.addEventListener("scroll", this.adjustArrowOnScroll.bind(this));
+		window.addEventListener("resize", this.forceUpdate())
+	}
 	render() {
 		return (
 			<Layout id="landing-pg">
-				<Intro />
+				<Intro arrowOffset={this.state.arrowOffset} arrowOpacity={this.state.arrowOpacity} />
 				<Message />
 			</Layout>
 		);
