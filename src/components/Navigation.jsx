@@ -18,7 +18,7 @@ class Navigation extends PureComponent {
                                 animationName: "shrink",
                                 navitems: {
                                     transform: `scale(1) ${
-                                        window.innerWidth <= 400 ? "" : "translateY(25%)"
+                                        window.innerWidth <= 400 ? "translateY(-10%)" : "translateY(20%)"
                                         }`,
                                     opacity: 0,
                                 },
@@ -35,7 +35,7 @@ class Navigation extends PureComponent {
                                 display: "flex",
                                 navitems: {
                                     transform: `scale(1) ${
-                                        window.innerWidth <= 400 ? "" : "translateY(25%)"
+                                        window.innerWidth <= 400 ? "translateY(-10%)" : "translateY(20%)"
                                         }`,
                                     opacity: 1,
                                 },
@@ -51,18 +51,18 @@ class Navigation extends PureComponent {
                     style={{
                         display: this.state.display,
                         animationName: this.state.animationName,
-                        width:
-                            this.state.animationName === "grow" && typeof window !== "undefined"
-                                ? window.innerWidth <= 400
-                                    ? `${window.innerWidth * 0.8}px`
-                                    : `${window.innerHeight / 2}px`
-                                : "",
-                        height:
-                            this.state.animationName === "grow" && typeof window !== "undefined"
-                                ? window.innerWidth <= 400
-                                    ? `${window.innerWidth * 0.8}px`
-                                    : `${window.innerHeight / 2}px`
-                                : "",
+                        // width:
+                        //     this.state.animationName === "grow" && typeof window !== "undefined"
+                        //         ? window.innerWidth <= 400
+                        //             ? `${window.innerWidth * 0.8}px`
+                        //             : `${window.innerHeight / 2}px`
+                        //         : "",
+                        // height:
+                        //     this.state.animationName === "grow" && typeof window !== "undefined"
+                        //         ? window.innerWidth <= 400
+                        //             ? `${window.innerWidth * 0.8}px`
+                        //             : `${window.innerHeight / 2}px`
+                        //         : "",
                         transformOrigin: "top right",
                     }}
                 >

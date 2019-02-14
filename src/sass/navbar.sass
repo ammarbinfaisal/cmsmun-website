@@ -2,8 +2,12 @@
     position: fixed
     top: 0
     right: 0
-    width: 0
-    height: 0
+    transform: scale(0)
+    height: 90vw
+    width: 90vw
+    @media (min-width: 400px)
+        height: 55vh
+        width: 55vh
     animation:
         name: grow
         duration: .6s
