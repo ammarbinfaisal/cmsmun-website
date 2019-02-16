@@ -19,16 +19,15 @@ const Intro = props => (
 								getComputedStyle(document.querySelector("#intro")).height.split("px")[0] ||
 								window.innerHeight,
 							behavior: "smooth",
-						})
+						});
 					else if (typeof window.scroll)
 						window.scroll({
 							top:
 								getComputedStyle(document.querySelector("#intro")).height.split("px")[0] ||
 								window.innerHeight,
 							behavior: "smooth",
-						})
-				}
-				}
+						});
+				}}
 			/>
 		</div>
 	</div>
@@ -72,25 +71,29 @@ class Message extends PureComponent {
 }
 
 class IndexPage extends PureComponent {
-
 	constructor() {
 		super();
-		this.state = {
-			arrowOffset: `${window.innerHeight * 0.9}px`,
-			arrowOpacity: (typeof window.scrollTo || typeof window.scroll) ? 0.6 : 0
-		}
+		if (typeof window !== "undefined")
+			this.state = {
+				arrowOffset: `${window.innerHeight * 0.9}px`,
+				arrowOpacity: typeof window.scrollTo || typeof window.scroll ? 0.6 : 0,
+			};
 	}
 
 	adjustArrowOnScroll() {
-		setTimeout(() => {
-			this.setState({ arrowOffset: `${window.innerHeight * 0.9}px`, arrowOpacity: 1 })
-		}, 200);
-		window.removeEventListener("scroll", this.adjustArrowOnScroll)
+		if (typeof window !== "undefined") {
+			setTimeout(() => {
+				this.setState({ arrowOffset: `${window.innerHeight * 0.9}px`, arrowOpacity: 1 });
+			}, 250);
+			window.removeEventListener("scroll", this.adjustArrowOnScroll);
+		}
 	}
 
 	componentDidMount() {
-		window.addEventListener("scroll", this.adjustArrowOnScroll.bind(this));
-		window.addEventListener("resize", this.forceUpdate())
+		if (typeof window !== "undefined") {
+			window.addEventListener("scroll", this.adjustArrowOnScroll.bind(this));
+			window.addEventListener("resize", this.forceUpdate());
+		}
 	}
 	render() {
 		return (

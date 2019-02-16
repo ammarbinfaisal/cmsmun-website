@@ -9,7 +9,7 @@ import "../sass/committees.sass";
 class Agendas extends PureComponent {
 	render() {
 		return (
-			<Layout id="committees" style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
+			<Layout id="committees" style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}>
 				<Helmet>
 					<title>Committees | CMSMUN ALIGANJ</title>
 				</Helmet>
@@ -25,7 +25,7 @@ class Agendas extends PureComponent {
 						display: "flex",
 						justifyContent: "flexStart",
 						alignItems: "center",
-						overflowX: "scroll"
+						overflowX: "scroll",
 					}}
 				>
 					<div
