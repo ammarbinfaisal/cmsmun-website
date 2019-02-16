@@ -98,7 +98,7 @@ class IndexPage extends PureComponent {
 	render() {
 		return (
 			<Layout id="landing-pg">
-				<Intro arrowOffset={this.state.arrowOffset} arrowOpacity={this.state.arrowOpacity} />
+				<Intro arrowOffset={this.state ? this.state.arrowOffset : "90vh"} arrowOpacity={this.state ? this.state.arrowOpacity : "0.7"} />
 				<Message />
 			</Layout>
 		);
