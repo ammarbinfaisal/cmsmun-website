@@ -30,11 +30,9 @@ class Layout extends PureComponent {
 						content="City Montessori School Aliganj Model United Nations (CMSMUN Aliganj)"
 					/>
 				</Helmet>
-				<Background/>
+				<Background />
 				<Navigation />
-				<div id={this.props.id}>
-					{this.props.children}
-				</div>
+				<div id={this.props.id}>{this.props.children}</div>
 				<Footer />
 			</div>
 		);
