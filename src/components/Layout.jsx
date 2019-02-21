@@ -19,6 +19,8 @@ class Layout extends PureComponent {
 			<div id="layout-root" style={this.props.style}>
 				<Helmet>
 					<title>CMS Aliganj's Model United Nations</title>
+					<link rel="preconnect" href="https://fonts.gstatic.com" />
+					<link rel="preconnect" href="https://use.fontawesome.com" />
 					<link
 						rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -27,7 +29,7 @@ class Layout extends PureComponent {
 					/>
 					<meta
 						name="description"
-						content="City Montessori School Aliganj Model United Nations (CMSMUN Aliganj)"
+						content="City Montessori School Aliganj Model United Nations - CMSMUN Aliganj"
 					/>
 				</Helmet>
 				<Background />
