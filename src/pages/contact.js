@@ -42,16 +42,14 @@ const contacts = [
 const Contact = () => (
 	<Layout id="contact">
 		<Helmet>
-			<title>Contact Us | CMSMUN ALIGANJ</title>
+			<title>Contact us | CMSMUN ALIGANJ</title>
 		</Helmet>
-		<div className="white-overlay black full-page">
-			<div className="questrial s9em">
+		<div className="white-overlay black full-page questrial s9em">
 				<h1>Contact</h1>
                 {
                     contacts.map(contact => <PersonContact {...contact}/>)
                 }
 			</div>
-		</div>
 	</Layout>
 );
 
