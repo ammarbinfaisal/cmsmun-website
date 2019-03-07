@@ -5,10 +5,10 @@ import logo from "../images/logo3.svg";
 const Intro = props => (
 	<div id="intro" className="white bg-fixed lato">
 		<div>
-			<img src={logo} className="logo" alt="logo" />
-			<h2>City Montessori School, Aliganj Model United Nations</h2>
-			<h1>CMSMUN ALIGANJ</h1>
-			<h3>2019</h3>
+			<img src={logo} className="logo" alt="logo" style={{ opacity: props.introOpacity, transform: props.introTransfrom }} />
+			<h2 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>City Montessori School, Aliganj Model United Nations</h2>
+			<h1 style={{ opacity: props.introOpacity * 2, transform: props.introTransfrom }}>CMSMUN ALIGANJ</h1>
+			<h3 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>2019</h3>
 			<i
 				className="fas fa-arrow-down white"
 				style={{ top: props.arrowOffset, opacity: props.arrowOpacity }}
@@ -37,7 +37,7 @@ class Message extends PureComponent {
 	render() {
 		return (
 			<div id="invitation">
-				<div className="white-overlay">
+				<div className="white-overlay" style={{ opacity: this.props.messageOpacity }}>
 					<h3 className="black questrial">Invitation</h3>
 					<div className="questrial s9em" id="invitation-text">
 						Dear delegates, faculty advisors, parents and future diplomats,
@@ -76,22 +76,35 @@ class IndexPage extends PureComponent {
 		if (typeof window !== "undefined")
 			this.state = {
 				arrowOffset: `${window.innerHeight * 0.9}px`,
-				arrowOpacity: typeof window.scrollTo || typeof window.scroll ? 0.6 : 0,
+				arrowOpacity: 1,
+				introOpacity: 1,
 			};
 	}
 
 	adjustArrowOnScroll() {
 		if (typeof window !== "undefined") {
 			setTimeout(() => {
-				this.setState({ arrowOffset: `${window.innerHeight * 0.9}px`, arrowOpacity: 1 });
+				this.setState({ arrowOffset: `${window.innerHeight * 0.9}px` });
 			}, 250);
 			window.removeEventListener("scroll", this.adjustArrowOnScroll);
+		}
+	}
+
+	adjustIntroOnScroll() {
+		if (typeof window !== "undefined") {
+			const opacity = 1 - (window.scrollY / window.innerHeight) * 1.2;
+			this.setState({
+				introOpacity: opacity,
+				arrowOpacity: opacity,
+				introTransfrom: `translateY(${window.scrollY / 3}px)`
+			});
 		}
 	}
 
 	componentDidMount() {
 		if (typeof window !== "undefined") {
 			window.addEventListener("scroll", this.adjustArrowOnScroll.bind(this));
+			window.addEventListener("scroll", this.adjustIntroOnScroll.bind(this));
 			window.addEventListener("resize", this.forceUpdate());
 		}
 	}
@@ -101,8 +114,12 @@ class IndexPage extends PureComponent {
 				<Intro
 					arrowOffset={this.state ? this.state.arrowOffset : "90vh"}
 					arrowOpacity={this.state ? this.state.arrowOpacity : "0.7"}
+					introOpacity={this.state.introOpacity}
+					introTransfrom={this.state.introTransfrom}
 				/>
-				<Message />
+				<Message
+					messageOpacity={1 - this.state.introOpacity / 1.5}
+				/>
 			</Layout>
 		);
 	}
