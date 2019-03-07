@@ -7,7 +7,7 @@ const Intro = props => (
 		<div>
 			<img src={logo} className="logo" alt="logo" style={{ opacity: props.introOpacity, transform: props.introTransfrom }} />
 			<h2 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>City Montessori School, Aliganj Model United Nations</h2>
-			<h1 style={{ opacity: props.introOpacity * 2, transform: props.introTransfrom }}>CMSMUN ALIGANJ</h1>
+			<h1 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>CMSMUN ALIGANJ</h1>
 			<h3 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>2019</h3>
 			<i
 				className="fas fa-arrow-down white"
@@ -73,9 +73,8 @@ class Message extends PureComponent {
 class IndexPage extends PureComponent {
 	constructor() {
 		super();
-		if (typeof window !== "undefined")
 			this.state = {
-				arrowOffset: `${window.innerHeight * 0.9}px`,
+				arrowOffset: `${typeof window !== "undefined" ? window.innerHeight * 0.9 : 0}px`,
 				arrowOpacity: 1,
 				introOpacity: 1,
 			};
@@ -92,7 +91,7 @@ class IndexPage extends PureComponent {
 
 	adjustIntroOnScroll() {
 		if (typeof window !== "undefined") {
-			const opacity = 1 - (window.scrollY / window.innerHeight) * 1.2;
+			const opacity = 1 - (window.scrollY / window.innerHeight) * 1.05;
 			this.setState({
 				introOpacity: opacity,
 				arrowOpacity: opacity,
