@@ -6,15 +6,71 @@ import { graphql } from "gatsby";
 
 import "../sass/committees.sass";
 
-class Agendas extends PureComponent {
-	componentDidMount() {
-		this.forceUpdate();
+class Committee extends PureComponent {
+	constructor(props) {
+		super(props);
+		const imageWidth = props.node.childImageSharp.fluid.presentationWidth;
+		this.state = {
+			opacity: 0,
+			transform: `scale(0.5) translateY(${this.props.index % 2 === 0 ? "-" : ""}200%)`,
+			imageWidth:
+				typeof window !== "undefined"
+					? window.innerWidth <= 450
+						? window.innerWidth * .9
+						: window.innerWidth < 1080
+							? imageWidth * 0.8
+							: imageWidth
+					: 450
+		}
 	}
+	componentDidMount() {
+		if (typeof window !== "undefined") {
+			const { index: i } = this.props;
+			const $divMeantToBeScrolled = document.querySelector("#committees > div");
+			const fadeIn = () => {
+				const $imageDiv = document.querySelector(`.imageDiv${i}`);
+				const leftOffset = $imageDiv.offsetLeft;
+				const scrolledPixels = $divMeantToBeScrolled.scrollLeft;
+				if (leftOffset + this.state.imageWidth - 50 > scrolledPixels && leftOffset <= (scrolledPixels + window.innerWidth))
+					this.setState({ opacity: 1, transform: "translateY(0) scale(1)" });
+				else
+					this.setState({ opacity: 0, transform: `scale(0.5) translateY(${this.props.index % 2 === 0 ? "-" : ""}200%)` });
+			}
+			fadeIn();
+			$divMeantToBeScrolled.addEventListener("scroll", fadeIn);
+			this.forceUpdate();
+			window.addEventListener("resize", () => this.forceUpdate());
+		}
+	}
+	render() {
+		const { node, index: i } = this.props;
+		let margin = window.innerWidth * .05;
+		margin = margin > 36 ? 36 : margin;
+		return (
+			<Img
+				fluid={node.childImageSharp.fluid}
+				key={node.childImageSharp.id}
+				className={`imageDiv${i}`}
+				style={{
+					width: `${this.state.imageWidth}px`,
+					margin: `0 ${margin}px`,
+					boxSizing: "content-box",
+					transition: "1s",
+					transitionDelay: `${i * .1}s`,
+					...this.state
+				}}
+			/>
+		);
+	}
+}
+
+class Committees extends PureComponent {
 	render() {
 		return (
 			<Layout id="committees" style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}>
 				<Helmet>
 					<title>Committees | CMSMUN ALIGANJ</title>
+					<meta name="description" content="committees of CMSMUN ALIGANJ 2019" />
 				</Helmet>
 				<div
 					style={{
@@ -41,28 +97,7 @@ class Agendas extends PureComponent {
 							alignItems: "center",
 						}}
 					>
-						{this.props.data.allFile.edges.map(({ node }, i) => {
-							const imageWidth = node.childImageSharp.fluid.presentationWidth;
-							return (
-								<Img
-									fluid={node.childImageSharp.fluid}
-									key={node.childImageSharp.id}
-									className={`imageDiv${i}`}
-									style={{
-										width:
-											typeof window !== "undefined"
-												? window.innerWidth <= 450
-													? `${imageWidth / 2}px`
-													: window.innerWidth < 1080
-													? `${imageWidth * 0.75}px`
-													: `${imageWidth}px`
-												: `450px`,
-										margin: "0 30px",
-										boxSizing: "content-box",
-									}}
-								/>
-							);
-						})}
+						{this.props.data.allFile.edges.map(({ node }, i) => <Committee node={node} index={i} key={i} />)}
 					</div>
 				</div>
 				{/* </div> */}
@@ -71,7 +106,7 @@ class Agendas extends PureComponent {
 	}
 }
 
-export default Agendas;
+export default Committees;
 
 export const query = graphql`
 	query {
