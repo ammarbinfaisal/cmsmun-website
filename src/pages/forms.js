@@ -6,6 +6,7 @@ const About = () => (
 	<Layout id="forms">
 		<Helmet>
 			<title>Forms | CMSMUN ALIGANJ</title>
+			<meta name="description" content="Forms for CMSMUN ALIGANJ 2019" />
 		</Helmet>
 		<div className="white-overlay black full-page">
 			<div className="questrial s9em fw700">
