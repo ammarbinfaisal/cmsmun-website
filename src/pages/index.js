@@ -118,7 +118,7 @@ class IndexPage extends PureComponent {
 					introTransfrom={this.state.introTransfrom}
 				/>
 				<Message
-					messageOpacity={1 - this.state.introOpacity / 1.5}
+					messageOpacity={1 - this.state.introOpacity / 2}
 				/>
 			</Layout>
 		);
