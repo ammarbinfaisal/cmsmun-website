@@ -43,7 +43,7 @@ const Contact = () => (
 	<Layout id="contact">
 		<Helmet>
 			<title>Contact us | CMSMUN ALIGANJ</title>
-			<meta name="description" content="contact us | CMSMUN ALIGANJ"></meta>
+			<meta name="description" content="contact us | CMSMUN ALIGANJ" />
 		</Helmet>
 		<div className="white-overlay black full-page questrial s9em">
 			<h1>Contact</h1>

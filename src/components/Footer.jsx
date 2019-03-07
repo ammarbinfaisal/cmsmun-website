@@ -1,4 +1,6 @@
 import React from "react";
+import FBICON from "../assets/Facebook"
+import IGICON from "../assets/Instagram"
 import "../sass/footer.sass";
 
 const Footer = () => (
@@ -11,10 +13,10 @@ const Footer = () => (
 					rel="noopener noreferrer"
 					href="https://www.facebook.com/Cmsmun-Aliganj-261301907871830/"
 				>
-					<i className="fab fa-facebook-square" role="img" alt="facebook" />
+					<FBICON />
 				</a>
 				<a target="_blank" rel="noopener noreferrer" href="https://instagram.com/cmsmun_aliganj">
-					<i className="fab fa-instagram" role="img" alt="instagram" />
+					<IGICON />
 				</a>
 			</div>
 		</div>

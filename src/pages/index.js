@@ -1,15 +1,37 @@
 import React, { PureComponent } from "react";
+import detector from "detector";
 import Layout from "../components/Layout";
 import logo from "../images/logo3.svg";
+import DownArrow from "../assets/DownArrow"
+import Timer from "../components/Timer"
+
+let isComputer = false;
+if (typeof window !== "undefined") {
+	switch (detector.os.name) {
+		case "windows":
+		case "macosx":
+		case "linux":
+		case "chromeos":
+			isComputer = true;
+	}
+}
 
 const Intro = props => (
 	<div id="intro" className="white bg-fixed lato">
 		<div>
-			<img src={logo} className="logo" alt="logo" style={{ opacity: props.introOpacity, transform: props.introTransfrom }} />
-			<h2 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>City Montessori School, Aliganj Model United Nations</h2>
+			<img
+				src={logo}
+				className="logo"
+				alt="logo"
+				style={{ opacity: props.introOpacity, transform: props.introTransfrom }}
+			/>
+			<h2 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>
+				City Montessori School, Aliganj Model United Nations
+			</h2>
 			<h1 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>CMSMUN ALIGANJ</h1>
 			<h3 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>2019</h3>
-			<i
+			<Timer />
+			<DownArrow
 				className="fas fa-arrow-down white"
 				style={{ top: props.arrowOffset, opacity: props.arrowOpacity }}
 				onClick={e => {
@@ -39,7 +61,11 @@ class Message extends PureComponent {
 			<div id="invitation">
 				<div className="white-overlay" style={{ opacity: this.props.messageOpacity }}>
 					<h3 className="black questrial">Invitation</h3>
-					<div className="questrial s9em" id="invitation-text">
+					<div
+						className="questrial s9em"
+						id="invitation-text"
+						style={{ transform: this.props.messageTransform }}
+					>
 						Dear delegates, faculty advisors, parents and future diplomats,
 						<br />
 						<br />
@@ -73,11 +99,13 @@ class Message extends PureComponent {
 class IndexPage extends PureComponent {
 	constructor() {
 		super();
-			this.state = {
-				arrowOffset:  typeof window !== "undefined" ? `${window.innerHeight * 0.9}px` : "100vh",
-				arrowOpacity: 1,
-				introOpacity: 1,
-			};
+		this.state = {
+			arrowOffset: typeof window !== "undefined" ? `${window.innerHeight * 0.9}px` : "100vh",
+			arrowOpacity: 1,
+			introOpacity: 1,
+			messageOpacity: 0,
+			messageTransform: isComputer ? "translateX(100%)" : 0,
+		};
 	}
 
 	adjustArrowOnScroll() {
@@ -91,11 +119,18 @@ class IndexPage extends PureComponent {
 
 	adjustIntroOnScroll() {
 		if (typeof window !== "undefined") {
-			const opacity = 1 - (window.scrollY / window.innerHeight) * 1.05;
+			const scrolledRatio = window.scrollY / window.innerHeight;
+			const opacity = 1 - scrolledRatio * 1.05;
 			this.setState({
 				introOpacity: opacity,
 				arrowOpacity: opacity,
-				introTransfrom: `translateY(${window.scrollY / 3}px)`
+				introTransfrom: isComputer ? `translateY(${window.scrollY / 3}px)` : "",
+				messageOpacity: `${1 - opacity / 2}`,
+				messageTransform: isComputer
+					? scrolledRatio < 0.5
+						? `translateX(${100 - scrolledRatio * 200}%)`
+						: "translateX(0)"
+					: "",
 			});
 		}
 	}
@@ -104,21 +139,20 @@ class IndexPage extends PureComponent {
 		if (typeof window !== "undefined") {
 			window.addEventListener("scroll", this.adjustArrowOnScroll.bind(this));
 			window.addEventListener("scroll", this.adjustIntroOnScroll.bind(this));
-			window.addEventListener("resize", this.forceUpdate());
+			window.addEventListener("resize", this.adjustArrowOnScroll.bind(this));
 		}
 	}
+
 	render() {
 		return (
-			<Layout id="landing-pg">
+			<Layout id="landing-pg" style={{ overflowX: "hidden" }}>
 				<Intro
 					arrowOffset={this.state ? this.state.arrowOffset : "90vh"}
 					arrowOpacity={this.state ? this.state.arrowOpacity : "0.7"}
 					introOpacity={this.state.introOpacity}
 					introTransfrom={this.state.introTransfrom}
 				/>
-				<Message
-					messageOpacity={1 - this.state.introOpacity / 2}
-				/>
+				<Message messageOpacity={this.state.messageOpacity} messageTransform={this.state.messageTransform} />
 			</Layout>
 		);
 	}

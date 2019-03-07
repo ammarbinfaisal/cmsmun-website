@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "date-diff": "^0.2.1",
+    "detector": "^2.5.0",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-manifest": "^2.0.22",
