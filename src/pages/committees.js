@@ -1,10 +1,22 @@
 import React, { PureComponent } from "react";
 import Helmet from "react-helmet";
+import detector from "detector";
 import Layout from "../components/Layout";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
 
 import "../sass/committees.sass";
+
+let isComputer = false;
+if (typeof window !== "undefined") {
+	switch (detector.os.name) {
+		case "windows":
+		case "macosx":
+		case "linux":
+		case "chromeos":
+			isComputer = true;
+	}
+}
 
 class Committee extends PureComponent {
 	constructor(props) {
@@ -12,14 +24,14 @@ class Committee extends PureComponent {
 		const imageWidth = props.node.childImageSharp.fluid.presentationWidth;
 		this.state = {
 			opacity: 0,
-			transform: `scale(0.5) translateY(${this.props.index % 2 === 0 ? "-" : ""}200%)`,
+			transform: `scale(0.5) ${isComputer ? `translateY(${this.props.index % 2 === 0 ? "-" : ""}200%)` : ""}`,
 			imageWidth:
 				typeof window !== "undefined"
 					? window.innerWidth <= 450
 						? window.innerWidth * 0.9
 						: window.innerWidth < 1080
-						? imageWidth * 0.8
-						: imageWidth
+							? imageWidth * 0.8
+							: imageWidth
 					: 450,
 		};
 	}
@@ -39,7 +51,7 @@ class Committee extends PureComponent {
 				else
 					this.setState({
 						opacity: 0,
-						transform: `scale(0.5) translateY(${this.props.index % 2 === 0 ? "-" : ""}200%)`,
+						transform: `scale(0.5) ${isComputer ? `translateY(${this.props.index % 2 === 0 ? "-" : ""}200%)` : ""}`,
 					});
 			};
 			fadeIn();
