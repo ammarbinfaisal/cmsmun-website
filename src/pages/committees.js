@@ -50,7 +50,7 @@ class Committee extends PureComponent {
 	}
 	render() {
 		const { node, index: i } = this.props;
-		let margin = window.innerWidth * 0.05;
+		let margin = typeof window !== "undefined" ? window.innerWidth * 0.05 : 0;
 		margin = margin > 36 ? 36 : margin;
 		return (
 			<Img
