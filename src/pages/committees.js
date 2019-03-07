@@ -7,6 +7,9 @@ import { graphql } from "gatsby";
 import "../sass/committees.sass";
 
 class Agendas extends PureComponent {
+	componentDidMount() {
+		this.forceUpdate();
+	}
 	render() {
 		return (
 			<Layout id="committees" style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}>
@@ -26,6 +29,7 @@ class Agendas extends PureComponent {
 						justifyContent: "flexStart",
 						alignItems: "center",
 						overflowX: "scroll",
+						overflowY: "hidden",
 					}}
 				>
 					<div
@@ -37,19 +41,20 @@ class Agendas extends PureComponent {
 							alignItems: "center",
 						}}
 					>
-						{this.props.data.allFile.edges.map(({ node }) => {
+						{this.props.data.allFile.edges.map(({ node }, i) => {
 							const imageWidth = node.childImageSharp.fluid.presentationWidth;
 							return (
 								<Img
 									fluid={node.childImageSharp.fluid}
 									key={node.childImageSharp.id}
+									className={`imageDiv${i}`}
 									style={{
 										width:
 											typeof window !== "undefined"
 												? window.innerWidth <= 450
 													? `${imageWidth / 2}px`
 													: window.innerWidth < 1080
-													? `${(imageWidth * 3) / 4}px`
+													? `${imageWidth * 0.75}px`
 													: `${imageWidth}px`
 												: `450px`,
 										margin: "0 30px",
@@ -75,8 +80,8 @@ export const query = graphql`
 				node {
 					childImageSharp {
 						id
-						fluid(maxWidth: 720, quality: 100) {
-							...GatsbyImageSharpFluid_withWebp
+						fluid(maxWidth: 600, quality: 100) {
+							...GatsbyImageSharpFluid_withWebp_tracedSVG
 							presentationWidth
 						}
 					}

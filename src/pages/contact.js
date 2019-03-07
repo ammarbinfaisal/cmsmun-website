@@ -18,25 +18,25 @@ const contacts = [
 		name: "Ms. Trishla Ranjan",
 		phoneNumber: "+91 8853051333",
 		email: "",
-    },
-    {
+	},
+	{
 		designation: "Secretary General",
 		name: "Gauri Srivastava",
 		phoneNumber: "+91 9838935064",
 		email: "gaurisrivastava11@yahoo.in",
-    },
-    {
-        designation: "Director General",
-        name: "Anushka Singh",
-        phoneNumber: "+91 8174038877",
-        email: "kuhusingho@gmail.com"
-    },
-    {
-        designation: "Delegate Affairs",
-        name: "Shivyanshi Shukla",
-        phoneNumber: "+91 9453797423",
-        email: ""
-    }
+	},
+	{
+		designation: "Director General",
+		name: "Anushka Singh",
+		phoneNumber: "+91 8174038877",
+		email: "kuhusingho@gmail.com",
+	},
+	{
+		designation: "Delegate Affairs",
+		name: "Shivyanshi Shukla",
+		phoneNumber: "+91 9453797423",
+		email: "cmsmun.delegateaffairs@gmail.com",
+	},
 ];
 
 const Contact = () => (
@@ -45,11 +45,11 @@ const Contact = () => (
 			<title>Contact us | CMSMUN ALIGANJ</title>
 		</Helmet>
 		<div className="white-overlay black full-page questrial s9em">
-				<h1>Contact</h1>
-                {
-                    contacts.map(contact => <PersonContact {...contact}/>)
-                }
-			</div>
+			<h1>Contact</h1>
+			{contacts.map(contact => (
+				<PersonContact {...contact} />
+			))}
+		</div>
 	</Layout>
 );
 
