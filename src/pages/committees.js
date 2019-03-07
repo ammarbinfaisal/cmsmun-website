@@ -70,7 +70,7 @@ class Committees extends PureComponent {
 			<Layout id="committees" style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}>
 				<Helmet>
 					<title>Committees | CMSMUN ALIGANJ</title>
-					<meta name="description" content="committees of CMSMUN ALIGANJ 2019" />
+					<meta name="description" content="Committees of CMSMUN ALIGANJ 2019" />
 				</Helmet>
 				<div
 					style={{

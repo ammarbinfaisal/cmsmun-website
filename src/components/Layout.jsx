@@ -31,6 +31,28 @@ class Layout extends PureComponent {
 						name="description"
 						content="City Montessori School Aliganj Model United Nations - CMSMUN Aliganj"
 					/>
+					<link
+						rel="icon"
+						type="image/png"
+						href="/images/favicon32.png"
+						sizes="32x32"
+					/>
+					<link
+						rel="icon"
+						type="image/png"
+						href="/images/favicon16.png"
+						sizes="16x16"
+					/>
+
+					<link
+						rel="mask-icon"
+						href="/images/logo3svg"
+						color="#0e0e0e"
+					/>
+					<meta name="theme-color" content="#0e0e0e" />
+					<meta property="og:title" content="CMSMUN ALIGANJ 2019" />
+					<meta property="og:url" content="/" />
+					<meta property="og:image" content="/images/og-image.png" />
 				</Helmet>
 				<Background />
 				<Navigation />
