@@ -6,7 +6,7 @@ const About = () => (
 	<Layout id="about-us">
 		<Helmet>
 			<title>About us | CMSMUN ALIGANJ</title>
-			<meta name="description" content="about us | CMSMUN ALIGANJ"/>
+			<meta name="description" content="about us | CMSMUN ALIGANJ" />
 		</Helmet>
 		<div className="white-overlay black">
 			<div className="questrial s9em">

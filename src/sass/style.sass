@@ -13,7 +13,7 @@ body::-webkit-scrollbar-track
 
 body::-webkit-scrollbar-thumb 
   background-color: #0e0e0e
-  outline: 4px solid #000
+  border: 1px solid #fff
 
 .valign-center
   display: flex
@@ -61,6 +61,31 @@ body::-webkit-scrollbar-thumb
   width: 100%
   background: rgba(255, 255, 255, 0.8)
 
+#timer
+  @media screen and (max-width: 600px), (max-height: 600px)
+    display: none
+  display: flex
+  align-items: center
+  overflow: hidden
+  > *
+    margin: 0 8px
+    display: inline
+  
+  .numerals
+    +resp-font(1.4em)
+  
+  a
+    padding: 6px
+    display: flex
+    align-items: center
+  .fab
+    width: 24px
+
+.fa-facebook, .fa-instagram
+  transition: .4s
+  &:hover
+    transform: scale(1.5)
+    color: #ddd
 
 @import "./intro.sass"
 @import "./invitation.sass"

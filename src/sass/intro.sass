@@ -81,9 +81,9 @@
     position: absolute
     top: 90%
     right: 30px
-    font-size: calc(.4vh + .2vw + 2em)
+    width: calc(.4vh + .2vw + 2em)
     @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
-      font-size: calc(.4vh + .2vw + 3em)
+      width: calc(.4vh + .2vw + 3em)
     cursor: pointer
     transition: .4s
     animation:
@@ -92,8 +92,7 @@
       iteration-count: infinite
 
     &:hover
-      opacity: 1
-
+      opacity: 1 !important
 
 
 @keyframes wiggle
