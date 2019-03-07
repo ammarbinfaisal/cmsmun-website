@@ -74,7 +74,7 @@ class IndexPage extends PureComponent {
 	constructor() {
 		super();
 			this.state = {
-				arrowOffset: `${typeof window !== "undefined" ? window.innerHeight * 0.9 : window.innerHeight}px`,
+				arrowOffset:  typeof window !== "undefined" ? `${window.innerHeight * 0.9}px` : "100vh",
 				arrowOpacity: 1,
 				introOpacity: 1,
 			};
