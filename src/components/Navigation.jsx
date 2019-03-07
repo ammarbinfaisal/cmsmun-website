@@ -18,7 +18,7 @@ class Navigation extends PureComponent {
 								animationName: "shrink",
 								navitems: {
 									transform: `scale(1) ${
-										window.innerWidth <= 400 ? "translateY(-10%)" : "translateY(20%)"
+										window.innerWidth <= 400 ? "translateY(-10px)" : "translateY(20px)"
 									}`,
 									opacity: 0,
 								},
@@ -35,7 +35,7 @@ class Navigation extends PureComponent {
 								display: "flex",
 								navitems: {
 									transform: `scale(1) ${
-										window.innerWidth <= 400 ? "translateY(-10%)" : "translateY(20%)"
+										window.innerWidth <= 400 ? "translateY(-10px)" : "translateY(20px)"
 									}`,
 									opacity: 1,
 								},
@@ -71,6 +71,9 @@ class Navigation extends PureComponent {
 					</Link>
 					<Link to="/about-us" style={this.state.navitems}>
 						About&nbsp;us
+					</Link>
+					<Link to="/contact" style={this.state.navitems}>
+						Contact&nbsp;us
 					</Link>
 					<Link to="/committees" style={this.state.navitems}>
 						Committees
