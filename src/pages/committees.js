@@ -30,8 +30,8 @@ class Committee extends PureComponent {
 					? window.innerWidth <= 450
 						? window.innerWidth * 0.9
 						: window.innerWidth < 1080
-							? imageWidth * 0.8
-							: imageWidth
+						? imageWidth * 0.8
+						: imageWidth
 					: 450,
 		};
 	}
@@ -51,7 +51,9 @@ class Committee extends PureComponent {
 				else
 					this.setState({
 						opacity: 0,
-						transform: `scale(0.5) ${isComputer ? `translateY(${this.props.index % 2 === 0 ? "-" : ""}200%)` : ""}`,
+						transform: `scale(0.5) ${
+							isComputer ? `translateY(${this.props.index % 2 === 0 ? "-" : ""}200%)` : ""
+						}`,
 					});
 			};
 			fadeIn();

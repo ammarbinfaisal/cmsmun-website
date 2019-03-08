@@ -2,8 +2,8 @@ import React, { PureComponent } from "react";
 import detector from "detector";
 import Layout from "../components/Layout";
 import logo from "../images/logo3.svg";
-import DownArrow from "../assets/DownArrow"
-import Timer from "../components/Timer"
+import DownArrow from "../assets/DownArrow";
+import Timer from "../components/Timer";
 
 let isComputer = false;
 if (typeof window !== "undefined") {
@@ -17,7 +17,7 @@ if (typeof window !== "undefined") {
 }
 
 const Intro = props => (
-	<div id="intro" className="white bg-fixed lato">
+	<div id="intro" className="white bg-fixed ubuntu">
 		<div>
 			<img
 				src={logo}

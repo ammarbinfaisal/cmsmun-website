@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { Link } from "gatsby";
-import Bars from "../assets/Bars"
+import Bars from "../assets/Bars";
 class Navigation extends PureComponent {
 	constructor() {
 		super();
@@ -11,7 +11,8 @@ class Navigation extends PureComponent {
 		setTimeout(() => {
 			try {
 				let height =
-					getComputedStyle(document.querySelector("#navigation a")).height.split("px")[0] * 7 + "px" || "50vh";
+					getComputedStyle(document.querySelector("#navigation a")).height.split("px")[0] * 7 + "px" ||
+					"50vh";
 				this.setState({
 					height,
 					width: height.split("px")[0] - 4 + "px",
@@ -19,7 +20,7 @@ class Navigation extends PureComponent {
 			} catch (e) {
 				console.log(e);
 			}
-		}, 1000)
+		}, 1000);
 	}
 	componentDidMount() {
 		if (typeof document !== "undefined") {
@@ -31,7 +32,7 @@ class Navigation extends PureComponent {
 			<div className="white">
 				<div
 					id="nav-toggle"
-					onClick={(e) => {
+					onClick={e => {
 						this.setSize();
 						/* const $mainDiv =
 							document.querySelector("#committees") ||
