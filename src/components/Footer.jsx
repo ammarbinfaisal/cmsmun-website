@@ -1,6 +1,6 @@
 import React from "react";
-import FBICON from "../assets/Facebook"
-import IGICON from "../assets/Instagram"
+import FBICON from "../assets/Facebook";
+import IGICON from "../assets/Instagram";
 import "../sass/footer.sass";
 
 const Footer = () => (
