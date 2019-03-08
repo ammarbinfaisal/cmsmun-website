@@ -18,12 +18,12 @@ class Timer extends PureComponent {
 			const calcTimeLeft = () => {
 				const dateOfEvent = new Date(2019, 4, 13);
 				const presentDate = new Date();
-				const diff = Date.diff(dateOfEvent, presentDate);
+				const diff = Date.diff(dateOfEvent, presentDate).seconds();
 				_this.setState({
-					hoursLeft: Math.floor(diff.hours() % 24),
-					minutesLeft: Math.floor(diff.minutes() % 60),
-					secondsLeft: Math.floor(diff.seconds() % 60),
-					daysLeft: Math.floor(diff.days() % 365),
+					daysLeft: Math.floor((diff / 86400) % 365),
+					hoursLeft: Math.floor((diff / 3600) % 24),
+					minutesLeft: Math.floor((diff / 60) % 60),
+					secondsLeft: Math.floor(diff % 60),
 				});
 			};
 			calcTimeLeft();
