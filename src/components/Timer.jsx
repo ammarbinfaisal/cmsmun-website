@@ -16,7 +16,7 @@ class Timer extends PureComponent {
 		if (typeof window !== "undefined") {
 			let _this = this;
 			const calcTimeLeft = () => {
-				const dateOfEvent = new Date(2019, 4, 13);
+				const dateOfEvent = new Date(2019, 3, 13);
 				const presentDate = new Date();
 				const diff = Date.diff(dateOfEvent, presentDate).seconds();
 				_this.setState({
