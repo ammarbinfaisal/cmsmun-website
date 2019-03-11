@@ -11,7 +11,7 @@ class Navigation extends PureComponent {
 		setTimeout(() => {
 			try {
 				let height =
-					getComputedStyle(document.querySelector("#navigation a")).height.split("px")[0] * 7 + "px" ||
+					getComputedStyle(document.querySelector("#navigation a")).height.split("px")[0] * 8.5 + "px" ||
 					"50vh";
 				this.setState({
 					height,
@@ -34,22 +34,6 @@ class Navigation extends PureComponent {
 					id="nav-toggle"
 					onClick={e => {
 						this.setSize();
-						/* const $mainDiv =
-							document.querySelector("#committees") ||
-							document.querySelector("#intro") ||
-							document.querySelector("#forms") ||
-							document.querySelector("#contact") ||
-							document.querySelector("#about-us");
-
-						const closeNav = e => {
-							console.log(e.target);
-							$mainDiv.removeEventListener("click", closeNav);
-							if (e.target.id !== "nav-toggle" || (this.state.display === "none" && e.target.id !== $mainDiv.id)) {
-								document.querySelector("#nav-toggle").click();
-							}
-						};
-						$mainDiv.addEventListener("click", closeNav); */
-						// shrinking if already grown
 						if (this.state.display === "flex") {
 							this.setState({
 								animationName: "shrink",
@@ -100,6 +84,9 @@ class Navigation extends PureComponent {
 					</Link>
 					<Link to="/contact" style={this.state.navitems}>
 						Contact&nbsp;us
+					</Link>
+					<Link to="/payment" style={this.state.navitems}>
+						Payment
 					</Link>
 					<Link to="/forms" style={this.state.navitems}>
 						Forms
