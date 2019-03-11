@@ -1,6 +1,6 @@
 @import "./mixins.sass"
 
-#about-us, #forms, #contact
+#about-us, #forms, #contact, #payment
     margin: 0
     > div
         justify-content: flex-start
@@ -13,13 +13,12 @@
         margin: 40px auto
         +columnify
 
-#contact
+#contact, #payment
     > div
-        padding: 40px
-
-    .person-contact
-        padding: 4vh 0
+        padding: 40px 8px
+    h2, h3
         text-align: center
+    .person-contact, .payment-method
         width: 100%
         overflow-x: hidden
         a
@@ -35,3 +34,36 @@
             max-width: 600px
             margin-top: 18px
             margin-bottom: 32px
+
+.person-contact
+    text-align: center
+    padding: 4vh 0
+
+#payment
+    h2
+        margin-bottom: 16px
+    > div > div
+        margin: 36px auto
+
+.payment-method
+    padding: 32px
+    text-align: left
+    > table, p
+        max-width: 640px
+        margin: auto
+        margin-bottom: 24px
+    > table
+        box-sizing: content-box
+        width: 95%
+        @media screen and (max-width: 800px)
+            +resp-font(.8em)
+        @media screen and (max-width: 370px) 
+            width: 100%
+            +resp-font(.7em)
+        tr
+            margin-bottom: 8px
+        td:first-child
+            padding-right: 5%
+        td
+            border: 1px #0e0e0e solid
+            padding: 4px
