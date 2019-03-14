@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 const Contact = () => (
 	<Layout id="payment">
 		<Helmet>
-			<title>Contact us | CMSMUN ALIGANJ</title>
+			<title>Payment | CMSMUN ALIGANJ</title>
 			<meta name="description" content="Payment | CMSMUN ALIGANJ" />
 		</Helmet>
 		<div className="white-overlay black full-page questrial s9em">
