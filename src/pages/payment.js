@@ -12,8 +12,8 @@ const Contact = () => (
 			<h1>Payment</h1>
 			<div id="fee-info">
 				<h2>Delegates fee</h2>
-				<p>Individual delegates: 1500</p>
-				<p>School delegates: 1500</p>
+				<p>Individual delegates: &#8377;1500</p>
+				<p>School delegation: &#8377;1000 per head</p>
 			</div>
 			<div id="modes-of-payment">
 				<h2>Modes of payment</h2>
