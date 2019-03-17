@@ -31,6 +31,11 @@ class Timer extends PureComponent {
 		}
 	}
 	render() {
+		let { daysLeft, hoursLeft, minutesLeft, secondsLeft } = this.state;
+		daysLeft = daysLeft.toString();
+		hoursLeft = hoursLeft.toString();
+		minutesLeft = minutesLeft.toString();
+		secondsLeft = secondsLeft.toString();
 		return (
 			<div
 				id="timer"
@@ -42,19 +47,19 @@ class Timer extends PureComponent {
 				}}
 			>
 				<div>
-					<span className="numerals">{this.state.daysLeft}</span>
+					<span className="numerals">{daysLeft.length < 2 ? "0" + daysLeft : daysLeft}</span>
 					<span className="text">days</span>
 				</div>
 				<div>
-					<span className="numerals">{this.state.hoursLeft}</span>
+					<span className="numerals">{hoursLeft.length < 2 ? "0" + hoursLeft : hoursLeft}</span>
 					<span className="text">hours</span>
 				</div>
 				<div>
-					<span className="numerals">{this.state.minutesLeft}</span>
+					<span className="numerals">{minutesLeft.length < 2 ? "0" + minutesLeft : minutesLeft}</span>
 					<span className="text">minutes</span>
 				</div>
 				<div>
-					<span className="numerals">{this.state.secondsLeft}</span>
+					<span className="numerals">{secondsLeft.length < 2 ? "0" + secondsLeft : secondsLeft}</span>
 					<span className="text">seconds</span>
 				</div>
 				<div style={{ marginLeft: "24px", display: "Flex", alignItems: "baseline" }}>
