@@ -7,9 +7,13 @@ class Timer extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
-			hoursLeft: "",
-			minutesLeft: "",
-			daysLeft: "",
+			hoursLeft: 0,
+			minutesLeft: 0,
+			secondsLeft: 0,
+			daysLeft: 0,
+			hoursPostfix: "hours",
+			minutesPostfix: "minutes",
+			secondsPostfix: "seconds"
 		};
 	}
 	componentDidMount() {
@@ -28,10 +32,25 @@ class Timer extends PureComponent {
 			};
 			calcTimeLeft();
 			setInterval(calcTimeLeft, 1000);
+			const setPostfix = () => {
+				if(window.innerWidth < 450){
+					_this.setState({
+						minutesPostfix: "min",
+						secondsPostfix: "sec"
+					})
+				} else{
+					_this.setState({
+						minutesPostfix: "minutes",
+						secondsPostfix: "seconds"
+					})
+				}
+			}
+			setPostfix();
+			window.addEventListener("resize", setPostfix);
 		}
 	}
 	render() {
-		let { daysLeft, hoursLeft, minutesLeft, secondsLeft } = this.state;
+		let { daysLeft, hoursLeft, minutesLeft, secondsLeft, minutesPostfix, secondsPostfix } = this.state;
 		daysLeft = daysLeft.toString();
 		hoursLeft = hoursLeft.toString();
 		minutesLeft = minutesLeft.toString();
@@ -56,11 +75,11 @@ class Timer extends PureComponent {
 				</div>
 				<div>
 					<span className="numerals">{minutesLeft.length < 2 ? "0" + minutesLeft : minutesLeft}</span>
-					<span className="text">minutes</span>
+					<span className="text">{minutesPostfix}</span>
 				</div>
 				<div>
 					<span className="numerals">{secondsLeft.length < 2 ? "0" + secondsLeft : secondsLeft}</span>
-					<span className="text">seconds</span>
+					<span className="text">{secondsPostfix}</span>
 				</div>
 				<div style={{ marginLeft: "24px", display: "Flex", alignItems: "baseline" }}>
 					<a
