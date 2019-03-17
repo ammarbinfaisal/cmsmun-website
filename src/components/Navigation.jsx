@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import { Link } from "gatsby";
 import Bars from "../assets/Bars";
+
 class Navigation extends PureComponent {
 	constructor() {
 		super();

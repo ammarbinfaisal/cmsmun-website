@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb
   background: rgba(255, 255, 255, 0.8)
 
 #timer
-  @media screen and (max-width: 600px), (max-height: 600px)
+  @media screen and (max-width: 375px), (max-height: 520px)
     display: none
   display: flex
   align-items: center
@@ -81,6 +81,8 @@ body::-webkit-scrollbar-thumb
     align-items: center
   .fab
     width: 24px
+    @media screen and (max-width: 600px), (max-height: 600px)
+      display: none
 
 .fa-facebook, .fa-instagram
   transition: .4s
