@@ -59,11 +59,16 @@ class Timer extends PureComponent {
 			<div
 				id="timer"
 				className="s7em questrial"
-				style={{
-					position: "absolute",
-					top: "4px",
-					left: "8px",
-				}}
+				style={
+					this.props.positionDefault
+						? {
+								position: "absolute",
+								top: "4px",
+								left: "8px",
+								...this.props.style,
+						  }
+						: { ...this.props.style }
+				}
 			>
 				<div>
 					<span className="numerals">{daysLeft.length < 2 ? "0" + daysLeft : daysLeft}</span>
@@ -81,18 +86,22 @@ class Timer extends PureComponent {
 					<span className="numerals">{secondsLeft.length < 2 ? "0" + secondsLeft : secondsLeft}</span>
 					<span className="text">{secondsPostfix}</span>
 				</div>
-				<div style={{ marginLeft: "24px", display: "Flex", alignItems: "baseline" }}>
-					<a
-						target="_blank"
-						rel="noopener noreferrer"
-						href="https://www.facebook.com/Cmsmun-Aliganj-261301907871830/"
-					>
-						<FBIcon />
-					</a>
-					<a target="_blank" rel="noopener noreferrer" href="https://instagram.com/cmsmun_aliganj">
-						<IGIcon />
-					</a>
-				</div>
+				{this.props.socials ? (
+					<div style={{ marginLeft: "24px", display: "Flex", alignItems: "baseline" }}>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://www.facebook.com/Cmsmun-Aliganj-261301907871830/"
+						>
+							<FBIcon />
+						</a>
+						<a target="_blank" rel="noopener noreferrer" href="https://instagram.com/cmsmun_aliganj">
+							<IGIcon />
+						</a>
+					</div>
+				) : (
+					""
+				)}
 			</div>
 		);
 	}

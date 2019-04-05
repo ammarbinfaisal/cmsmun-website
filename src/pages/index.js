@@ -30,7 +30,7 @@ const Intro = props => (
 			</h2>
 			<h1 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>CMSMUN ALIGANJ</h1>
 			<h3 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>2019</h3>
-			<Timer />
+			<Timer positionDefault={true} socials={true} />
 			<DownArrow
 				className="fas fa-arrow-down white"
 				style={{ top: props.arrowOffset, opacity: props.arrowOpacity }}
@@ -96,7 +96,7 @@ class Invitation extends PureComponent {
 								<br />
 								The Principle
 							</span>
-							<span style={{textAlign: "right"}}>
+							<span style={{ textAlign: "right" }}>
 								Ms. Trishla Ranjan
 								<br />
 								The Conference Manager
@@ -207,8 +207,16 @@ class IndexPage extends PureComponent {
 					introTransfrom={this.state.introTransfrom}
 				/>
 				<Invitation messageOpacity={this.state.messageOpacity} messageTransform={this.state.messageTransform} />
-				<div style={{background: "rgba(0, 0, 0, 0.8)", padding: "100px", textAlign: "Center"}}>
-					<a href="conference-itinerary.pdf" className="white questrial" style={{fontSize: "calc(.2vh + .2vw + 1.5em)"}}>
+				<div
+					style={{ background: "rgba(0, 0, 0, 0.8)", padding: "100px", textAlign: "Center" }}
+					className="white"
+				>
+					<Timer style={{ margin: "36px 0" }} />
+					<a
+						href="conference-itinerary.pdf"
+						className="questrial"
+						style={{ fontSize: "calc(.2vh + .2vw + 1.5em)" }}
+					>
 						CONFERENCE ITINERARY
 					</a>
 				</div>
