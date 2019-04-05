@@ -30,7 +30,7 @@ class Layout extends PureComponent {
 					<link rel="mask-icon" href="/images/logo3svg" color="#0e0e0e" />
 					<meta name="theme-color" content="#0e0e0e" />
 					<meta property="og:title" content="CMSMUN ALIGANJ 2019" />
-					<meta property="og:url" content="/" />
+					<meta property="og:url" content="cmsmunaliganj.com/" />
 					<meta property="og:image" content="/images/og-image.png" />
 				</Helmet>
 				<Background />

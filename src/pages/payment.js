@@ -37,36 +37,45 @@ const Contact = () => (
 								<td>IFSC code</td>
 								<td>ALLA0210571</td>
 							</tr>
-
 						</tbody>
 					</table>
 					<p>
-						The delegate who has made the payment can should show the receipt of the payment to make sure that the payment is cleared.
-				</p>
+						The delegate who has made the payment can should show the receipt of the payment to make sure
+						that the payment is cleared.
+					</p>
 					<hr />
 				</div>
 				<div className="payment-method">
 					<h3>Cash</h3>
 					<p>The amount can be paid in the branch itself</p>
 					<pre>
-						City Montessori School,<br/>
-						Sector O, ALiganj,<br/>
-						Lucknow, Uttar Pradesh.<br/>
+						City Montessori School,
+						<br />
+						Sector O, ALiganj,
+						<br />
+						Lucknow, Uttar Pradesh.
+						<br />
 						Pincode: 226024
 					</pre>
-					<hr/>
+					<hr />
 				</div>
 				<div className="payment-method">
 					<h3>Demand draft</h3>
-					<p>The payment can also be done through demand draft in favour of <b>CITY MONTESSORI SCHOOL, LUCKNOW</b></p>
+					<p>
+						The payment can also be done through demand draft in favour of{" "}
+						<b>CITY MONTESSORI SCHOOL, LUCKNOW</b>
+					</p>
 					<p>The demand draft is to be submitted at:</p>
 					<pre>
-						City Montessori School,<br/>
-						Sector O, ALiganj,<br/>
-						Lucknow, Uttar Pradesh.<br/>
+						City Montessori School,
+						<br />
+						Sector O, ALiganj,
+						<br />
+						Lucknow, Uttar Pradesh.
+						<br />
 						Pincode: 226024
 					</pre>
-					<hr/>
+					<hr />
 				</div>
 			</div>
 		</div>
