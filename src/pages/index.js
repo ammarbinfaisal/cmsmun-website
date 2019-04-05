@@ -120,13 +120,13 @@ class Message extends PureComponent {
 						id="invitation-text"
 						style={{ transform: this.props.messageTransform }}
 					>
-						It is my distinct honours to cordially invite you to the maiden edition of City Montessori
+						It is my distinct honour to cordially invite you to the maiden edition of City Montessori
 						School Model United Nations Aliganj to be held on 13th and 14th of April, 2019. With its
 						sustained legacy of excellence in various fields, City Montessori School Aliganj is all set to
 						bolster up its stance in the Model United Nations circuit, by offering its delegates a peerless
 						experience in making a roadmap to holistic changes and sustainable peace in this unpredictably
 						eruptive world. Model United Nations is a educational simulation of the United Nations in which
-						participants represents particular portfolios in various kinds of committees, these conferences
+						participants represent particular portfolios in various kinds of committees. These conferences
 						play a vital role in teaching delegates about United Nations, International relations and most
 						importantly, Diplomacy. Diplomacy means assessing situations in its entirety and taking the best
 						possible course of action in order to maintain one’s stance without hurting any sentiments. With
@@ -135,8 +135,8 @@ class Message extends PureComponent {
 						in order to give a platform to the delegates to cherish the art of diplomacy alongside the
 						dynamic International Press. To strengthen the passion of oration, problem solving and teamwork
 						of its delegates, we, the Secretariat, Organising Committee and the logistics of CMSMUN Aliganj,
-						with paramount of enthusiasm and a vision of serving one of the best conferences in the circuit,
-						awaits your presence.
+						with paramount enthusiasm and a vision of serving one of the best conferences in the circuit,
+						await your presence.
 						<br />
 						<p style={{ marginTop: "24px" }}>
 							Gauri Srivastava <br />
@@ -208,7 +208,7 @@ class IndexPage extends PureComponent {
 				/>
 				<Invitation messageOpacity={this.state.messageOpacity} messageTransform={this.state.messageTransform} />
 				<div
-					style={{ background: "rgba(0, 0, 0, 0.8)", padding: "100px", textAlign: "Center" }}
+					style={{ background: "rgba(0, 0, 0, 0.8)", padding: "100px 0", textAlign: "Center" }}
 					className="white"
 				>
 					<Timer style={{ margin: "36px 0" }} />
