@@ -30,7 +30,7 @@ const Intro = props => (
 			</h2>
 			<h1 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>CMSMUN ALIGANJ</h1>
 			<h3 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>2019</h3>
-			<Timer />
+			<Timer positionDefault={true} socials={true} />
 			<DownArrow
 				className="fas fa-arrow-down white"
 				style={{ top: props.arrowOffset, opacity: props.arrowOpacity }}
@@ -55,7 +55,7 @@ const Intro = props => (
 	</div>
 );
 
-class Message extends PureComponent {
+class Invitation extends PureComponent {
 	render() {
 		return (
 			<div id="invitation">
@@ -89,6 +89,60 @@ class Message extends PureComponent {
 						participants will find it a rewarding experience. The inaugural edition is expected to be
 						attended by a number of delegates from various prestigious schools across Lucknow. We would like
 						to take this opportunity to request the presence at the maiden edition of CMSMUN Aliganj.
+						<br />
+						<p style={{ display: "flex", justifyContent: "space-between", marginTop: "24px" }}>
+							<span>
+								Mrs. Jyoti Kashyap
+								<br />
+								The Principle
+							</span>
+							<span style={{ textAlign: "right" }}>
+								Ms. Trishla Ranjan
+								<br />
+								The Conference Manager
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		);
+	}
+}
+
+class Message extends PureComponent {
+	render() {
+		return (
+			<div id="message">
+				<div className="white-overlay" style={{ opacity: this.props.messageOpacity }}>
+					<h3 className="black questrial">Secretary General's Message</h3>
+					<div
+						className="questrial s9em"
+						id="invitation-text"
+						style={{ transform: this.props.messageTransform }}
+					>
+						It is my distinct honours to cordially invite you to the maiden edition of City Montessori
+						School Model United Nations Aliganj to be held on 13th and 14th of April, 2019. With its
+						sustained legacy of excellence in various fields, City Montessori School Aliganj is all set to
+						bolster up its stance in the Model United Nations circuit, by offering its delegates a peerless
+						experience in making a roadmap to holistic changes and sustainable peace in this unpredictably
+						eruptive world. Model United Nations is a educational simulation of the United Nations in which
+						participants represents particular portfolios in various kinds of committees, these conferences
+						play a vital role in teaching delegates about United Nations, International relations and most
+						importantly, Diplomacy. Diplomacy means assessing situations in its entirety and taking the best
+						possible course of action in order to maintain one’s stance without hurting any sentiments. With
+						its tagline “Pinnacle of Diplomacy”, CMSMUN Aliganj endorses this art which has kept the world
+						from war and is simulating six diverse range of committees both conventional and unconventional,
+						in order to give a platform to the delegates to cherish the art of diplomacy alongside the
+						dynamic International Press. To strengthen the passion of oration, problem solving and teamwork
+						of its delegates, we, the Secretariat, Organising Committee and the logistics of CMSMUN Aliganj,
+						with paramount of enthusiasm and a vision of serving one of the best conferences in the circuit,
+						awaits your presence.
+						<br />
+						<p style={{ marginTop: "24px" }}>
+							Gauri Srivastava <br />
+							Secretary-General <br />
+							CMSMUN ALIGANJ, 2019.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -152,7 +206,21 @@ class IndexPage extends PureComponent {
 					introOpacity={this.state.introOpacity}
 					introTransfrom={this.state.introTransfrom}
 				/>
-				<Message messageOpacity={this.state.messageOpacity} messageTransform={this.state.messageTransform} />
+				<Invitation messageOpacity={this.state.messageOpacity} messageTransform={this.state.messageTransform} />
+				<div
+					style={{ background: "rgba(0, 0, 0, 0.8)", padding: "100px", textAlign: "Center" }}
+					className="white"
+				>
+					<Timer style={{ margin: "36px 0" }} />
+					<a
+						href="conference-itinerary.pdf"
+						className="questrial"
+						style={{ fontSize: "calc(.2vh + .2vw + 1.5em)" }}
+					>
+						CONFERENCE ITINERARY
+					</a>
+				</div>
+				<Message />
 			</Layout>
 		);
 	}
