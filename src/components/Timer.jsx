@@ -13,7 +13,7 @@ class Timer extends PureComponent {
 			daysLeft: 0,
 			hoursPostfix: "hours",
 			minutesPostfix: "minutes",
-			secondsPostfix: "seconds"
+			secondsPostfix: "seconds",
 		};
 	}
 	componentDidMount() {
@@ -33,18 +33,18 @@ class Timer extends PureComponent {
 			calcTimeLeft();
 			setInterval(calcTimeLeft, 1000);
 			const setPostfix = () => {
-				if(window.innerWidth < 450){
+				if (window.innerWidth < 450) {
 					_this.setState({
 						minutesPostfix: "min",
-						secondsPostfix: "sec"
-					})
-				} else{
+						secondsPostfix: "sec",
+					});
+				} else {
 					_this.setState({
 						minutesPostfix: "minutes",
-						secondsPostfix: "seconds"
-					})
+						secondsPostfix: "seconds",
+					});
 				}
-			}
+			};
 			setPostfix();
 			window.addEventListener("resize", setPostfix);
 		}
