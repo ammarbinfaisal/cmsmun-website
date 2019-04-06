@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: "CMS Aliganj Model United Nations",
+        title: "CMSMUN ALIGANJ",
         siteUrl: "https://cmsmunaliganj.com"
     },
     plugins: [
@@ -8,8 +8,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: "CMS Aliganj Model United Nations",
-                short_name: "cmsmun",
+                name: "CMS Model United Nations Aliganj",
+                short_name: "CMSMUN",
                 start_url: "/",
                 background_color: "#0e0e0e",
                 theme_color: "#0e0e0e",
