@@ -210,6 +210,7 @@ class IndexPage extends PureComponent {
 				<div
 					style={{ background: "rgba(0, 0, 0, 0.8)", padding: "100px 0", textAlign: "Center" }}
 					className="white"
+					id="conference-itinerary"
 				>
 					<Timer style={{ margin: "36px 0" }} />
 					<a
