@@ -26,7 +26,7 @@ const Intro = props => (
 				style={{ opacity: props.introOpacity, transform: props.introTransfrom }}
 			/>
 			<h2 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>
-				City Montessori School, Aliganj Model United Nations
+				City Montessori School Model United Nations Aliganj
 			</h2>
 			<h1 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>CMSMUN ALIGANJ</h1>
 			<h3 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>2019</h3>
