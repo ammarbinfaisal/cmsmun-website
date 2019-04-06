@@ -18,11 +18,11 @@ class Layout extends PureComponent {
 		return (
 			<div id="layout-root" style={this.props.style}>
 				<Helmet>
-					<title>CMS Aliganj's Model United Nations</title>
+					<title>CMSMUN ALIGANJ</title>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<meta
 						name="description"
-						content="City Montessori School Aliganj Model United Nations - CMSMUN Aliganj"
+						content="City Montessori School Model United Nations Aliganj- CMSMUN ALIGANJ"
 					/>
 					<link rel="icon" type="image/png" href="/images/favicon32.png" sizes="32x32" />
 					<link rel="icon" type="image/png" href="/images/favicon16.png" sizes="16x16" />
