@@ -94,7 +94,7 @@ class Invitation extends PureComponent {
 							<span>
 								Mrs. Jyoti Kashyap
 								<br />
-								The Principle
+								The Principal
 							</span>
 							<span style={{ textAlign: "right" }}>
 								Ms. Trishla Ranjan
