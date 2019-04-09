@@ -88,10 +88,7 @@ class Navigation extends PureComponent {
 					</Link>
 					<Link to="/payment" style={this.state.navitems}>
 						Payment
-					</Link>
-					<Link to="/forms" style={this.state.navitems}>
-						Forms
-					</Link>
+					</Link>r
 				</div>
 			</div>
 		);
