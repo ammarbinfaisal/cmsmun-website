@@ -11,8 +11,8 @@ const NotFoundPage = () => (
 			backgroundColor: "rgba(255, 255, 255, 0.8)",
 			textAlign: "center",
 			width: "100%",
-			padding: "30% 0",
-			fontFamily: "Ubuntu, 'open sans', roboto, sans-serif",
+			padding: "100px 0",
+			fontFamily: "Questrial, Ubuntu, 'open sans', roboto, sans-serif",
 		}}
 	>
 		<Helmet>
