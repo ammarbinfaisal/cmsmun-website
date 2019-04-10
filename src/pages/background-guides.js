@@ -12,11 +12,12 @@ const BackgroundGuide = () => (
 			<h1>Background Guides</h1>
 			<div style={{display: "Flex", flexWrap: "wrap", margin: "0 12px"}}>
 			<a href="/bg-unga.pdf" className="bgguide">UNGA</a>
-			<a href="/bg-unhrc.pdf" className="bgguide">UNHRC</a>
 			<a href="/bg-unsc.pdf" className="bgguide">UNSC</a>
+			<a href="/bg-unhrc.pdf" className="bgguide">UNHRC</a>
 			<a href="/bg-unscw.pdf" className="bgguide">UNCSW</a>
-			<a href="/bg-jcc.pdf" className="bgguide">JCC</a>
 			<a href="/bg-aippm.pdf" className="bgguide">AIPPM</a>
+			<a href="/bg-jcc-axis.pdf" className="bgguide">JCC(AXIS)</a>
+			<a href="/bg-jcc-allies.pdf" className="bgguide">JCC(ALLIES)</a>
 			</div>
 	</div>
     </Layout>
