@@ -14,7 +14,7 @@ const BackgroundGuide = () => (
 			<a href="/bg-unga.pdf" className="bgguide">UNGA</a>
 			<a href="/bg-unsc.pdf" className="bgguide">UNSC</a>
 			<a href="/bg-unhrc.pdf" className="bgguide">UNHRC</a>
-			<a href="/bg-unscw.pdf" className="bgguide">UNCSW</a>
+			<a href="/bg-uncsw.pdf" className="bgguide">UNCSW</a>
 			<a href="/bg-aippm.pdf" className="bgguide">AIPPM</a>
 			<a href="/bg-jcc-axis.pdf" className="bgguide">JCC(AXIS)</a>
 			<a href="/bg-jcc-allies.pdf" className="bgguide">JCC(ALLIES)</a>
