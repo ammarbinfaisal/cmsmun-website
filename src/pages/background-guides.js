@@ -13,10 +13,10 @@ const BackgroundGuide = () => (
 			<div style={{display: "Flex", flexWrap: "wrap", margin: "0 12px"}}>
 			<a href="/bg-unga.pdf" className="bgguide">UNGA</a>
 			<a href="/bg-unhrc.pdf" className="bgguide">UNHRC</a>
-			<a href="/.pdf" className="bgguide">UNSC</a>
-			<a href="/.pdf" className="bgguide">UNCSW</a>
-			<a href="/.pdf" className="bgguide">JCC</a>
-			<a href="/.pdf" className="bgguide">AIPPM</a>
+			<a href="/bg-unsc.pdf" className="bgguide">UNSC</a>
+			<a href="/bg-unscw.pdf" className="bgguide">UNCSW</a>
+			<a href="/bg-jcc.pdf" className="bgguide">JCC</a>
+			<a href="/bg-aippm.pdf" className="bgguide">AIPPM</a>
 			</div>
 	</div>
     </Layout>
