@@ -5,8 +5,8 @@ import Layout from "../components/Layout";
 const BackgroundGuide = () => (
 	<Layout id="background-guides">
 		<Helmet>
-			<title>Background Guide | CMSMUN ALIGANJ</title>
-			<meta name="description" content="Background Guide | CMSMUN ALIGANJ" />
+			<title>Background Guides | CMSMUN ALIGANJ</title>
+			<meta name="description" content="Background Guides of committees of CMSMUN ALIGANJ" />
 		</Helmet>
 		<div className="white-overlay black full-page questrial s9em">
 			<h1>Background Guides</h1>
