@@ -18,6 +18,7 @@ const BackgroundGuide = () => (
 			<a href="/bg-aippm.pdf" className="bgguide">AIPPM</a>
 			<a href="/bg-jcc-axis.pdf" className="bgguide">JCC(AXIS)</a>
 			<a href="/bg-jcc-allies.pdf" className="bgguide">JCC(ALLIES)</a>
+			<a href="/bg-crisis.pdf" className="bgguide">BACKGROUND CRISIS</a>
 			</div>
 	</div>
     </Layout>
