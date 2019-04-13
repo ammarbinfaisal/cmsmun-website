@@ -3,7 +3,6 @@ import detector from "detector";
 import Layout from "../components/Layout";
 import logo from "../images/logo3.svg";
 import DownArrow from "../assets/DownArrow";
-import Timer from "../components/Timer";
 
 let isComputer = false;
 if (typeof window !== "undefined") {
@@ -30,7 +29,6 @@ const Intro = props => (
 			</h2>
 			<h1 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>CMSMUN ALIGANJ</h1>
 			<h3 style={{ opacity: props.introOpacity, transform: props.introTransfrom }}>2019</h3>
-			<Timer positionDefault={true} socials={true} />
 			<DownArrow
 				className="fas fa-arrow-down white"
 				style={{ top: props.arrowOffset, opacity: props.arrowOpacity }}
@@ -212,7 +210,6 @@ class IndexPage extends PureComponent {
 					className="white"
 					id="conference-itinerary"
 				>
-					<Timer style={{ margin: "36px 0" }} />
 					<a
 						href="conference-itinerary.pdf"
 						className="questrial"
