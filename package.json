@@ -6,7 +6,7 @@
   "dependencies": {
     "date-diff": "^0.2.1",
     "detector": "^2.5.0",
-    "gatsby": "^2.0.19",
+    "gatsby": "^5.12.9",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-manifest": "^2.0.22",
     "gatsby-plugin-nprogress": "^2.0.9",
@@ -36,7 +36,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "css-loader": "^1.0.0",
+    "css-loader": "^6.8.1",
     "node-sass": "^4.9.4",
     "prettier": "^1.14.2",
     "sass-loader": "^7.1.0",
