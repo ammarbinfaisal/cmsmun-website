@@ -6,7 +6,7 @@
   "dependencies": {
     "date-diff": "^0.2.1",
     "detector": "^2.5.0",
-    "gatsby": "^2.0.19",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-manifest": "^2.0.22",
     "gatsby-plugin-nprogress": "^2.0.9",
@@ -14,10 +14,10 @@
     "gatsby-plugin-purgecss": "^3.1.0",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.4",
-    "gatsby-plugin-sharp": "^2.0.20",
+    "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-sitemap": "^2.0.2",
     "gatsby-source-filesystem": "^2.0.20",
-    "gatsby-transformer-sharp": "^2.1.13",
+    "gatsby-transformer-sharp": "^2.12.1",
     "nuka-carousel": "^4.4.7",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
@@ -36,7 +36,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "css-loader": "^1.0.0",
+    "css-loader": "^6.8.1",
     "node-sass": "^9.0.0",
     "prettier": "^1.14.2",
     "sass-loader": "^7.1.0",
