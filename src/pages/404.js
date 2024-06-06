@@ -6,7 +6,7 @@ import "../sass/404.sass";
 const NotFoundPage = () => (
 	<div
 		id="404"
-		className="404-page"
+		className="page404"
 		style={{
 			backgroundColor: "rgba(255, 255, 255, 0.8)",
 			textAlign: "center",
